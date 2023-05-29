@@ -9,4 +9,4 @@
 **Turma:** Informática - Fase 5<br>
 **Professora:** Bruna Caroline Russi<br>
 **Matéria:** Banco de Dados 1<br>
-[**Referência** do Sistema:](https://docs.google.com/document/d/1kpgR25-CgklVrcE-6rWICn5qj_Gh7ZXoRv91psQtyhY/edit?usp=sharing)
+[**Referência do Sistema**](https://docs.google.com/document/d/1kpgR25-CgklVrcE-6rWICn5qj_Gh7ZXoRv91psQtyhY/edit?usp=sharing)
