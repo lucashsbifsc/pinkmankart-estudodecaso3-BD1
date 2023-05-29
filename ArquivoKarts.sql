@@ -101,8 +101,37 @@ INSERT INTO
 -- -----------------------------------------------------
 -- Inserção na tabela `vendas`
 -- -----------------------------------------------------
-INSERT INTO
-  vendas
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (1, '27/09/2022', '8503418452', 82680227009705, 8159998674.37);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (2, '03/04/2023', '9742754691', 24568883057582, 764244939.85);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (3, '11/08/2022', '6599752993', 76452950016284, 272262174.82);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (4, '02/04/2023', '5130261011', 98363411531040, 3213125493.95);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (5, '28/05/2023', '4709128685', 83186021330051, 5482808083.24);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (6, '17/06/2022', '8315247514', 61045853799452, 5797926834.34);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (7, '10/03/2023', '5196450025', 40166273804472, 355085856.32);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (8, '13/08/2022', '3398167195', 16116503161752, 5413373978.15);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (9, '10/11/2022', '6691712560', 1323413885212, 8798686109.97);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (10, '05/06/2022', '7142025115', 95840728542690, 6655506880.27);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (11, '26/09/2022', '0848123603', 91658815664731, 4956400002.22);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (12, '23/12/2022', '0666976570', 9817016847843, 2312281434.8);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (13, '01/04/2023', '3431682707', 37092220765241, 3517187789.61);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (14, '05/09/2022', '6225905855', 17561860775952, 6243798008.05);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (15, '02/09/2022', '8967246315', 68904837517791, 9534734937.47);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (16, '23/04/2023', '9134291695', 89144143201580, 7969371286.72);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (17, '25/08/2022', '9140561534', 24119198727533, 9008908578.47);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (18, '06/02/2023', '8079447314', 78494478228590, 1294402072.52);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (19, '30/05/2022', '5078391037', 31921526487208, 6351031789.66);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (20, '23/10/2022', '0182052028', 28368586634887, 8068853115.82);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (21, '26/09/2022', '4099528731', 58929016400725, 4627051168.93);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (22, '13/01/2023', '1020220198', 49610907791725, 5711988075.55);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (23, '14/12/2022', '2310749125', 43034635162442, 3770189731.62);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (24, '03/09/2022', '1599194058', 13366979919959, 1629897965.17);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (25, '25/10/2022', '7678151756', 64545837242891, 7595088082.27);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (1, '30/03/2023', '8343012380', 73203598635029, 9277055738.3);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (2, '09/10/2022', '5726586565', 87274178494125, 5337484351.75);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (3, '25/01/2023', '3013759321', 78635864102755, 535763656.24);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (4, '03/04/2023', '0551065141', 26706593324870, 5208066119.15);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES (5, '28/06/2022', '8658578097', 45917445060943, 9545492224.97);
+
 -- -----------------------------------------------------
 -- Inserção na tabela `compras`
 -- -----------------------------------------------------
