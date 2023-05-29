@@ -77,12 +77,24 @@ CREATE Table IF NOT EXISTS `compras` (
   CONSTRAINT `fk_karts_has_vendas_karts1` FOREIGN KEY (`karts_id_kart`) REFERENCES `karts` (`id_kart`) CONSTRAINT `fk_karts_has_vendas_vendas1` FOREIGN KEY (`vendas_id_vendas`) REFERENCES `vendas` (`id_vendas`)
 );
 
+-- -----------------------------------------------------
+-- Inserção na tabela `fornecedor`
+-- -----------------------------------------------------
 INSERT INTO
   fornecedor
+-- -----------------------------------------------------
+-- Inserção na tabela `karts`
+-- -----------------------------------------------------
 INSERT INTO
   karts
+-- -----------------------------------------------------
+-- Inserção na tabela `funcionarios`
+-- -----------------------------------------------------
 INSERT INTO
   funcionarios
+-- -----------------------------------------------------
+-- Inserção na tabela `clientes`
+-- -----------------------------------------------------
 INSERT INTO
   clientes (
     id_cliente,
@@ -483,8 +495,14 @@ VALUES
     15467588402
   );
 
+-- -----------------------------------------------------
+-- Inserção na tabela `vendas`
+-- -----------------------------------------------------
 INSERT INTO
   vendas
+-- -----------------------------------------------------
+-- Inserção na tabela `compras`
+-- -----------------------------------------------------
 INSERT INTO
   compras
 
