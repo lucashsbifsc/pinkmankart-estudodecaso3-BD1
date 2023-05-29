@@ -5,4 +5,9 @@ Repositório destinado ao Estudo de Caso 3 da matéria de Banco de Dados 1 do IF
 
 ![Diagrama Karts (Versão FINAL PI)](https://github.com/lucashsbifsc/estudodecaso3-BD1/assets/124683425/a2d13ef6-de6e-4c7c-b41f-195f75b39f2d)
 
-Referência do Sistema: https://docs.google.com/document/d/1kpgR25-CgklVrcE-6rWICn5qj_Gh7ZXoRv91psQtyhY/edit?usp=sharing
+Instituto Federal de Santa Catarina - Campus Gaspar
+Turma: Informática - Fase 5
+Professora: Bruna Caroline Russi
+Matéria: Banco de Dados 1
+Referência do Sistema: 
+https://docs.google.com/document/d/1kpgR25-CgklVrcE-6rWICn5qj_Gh7ZXoRv91psQtyhY/edit?usp=sharing
