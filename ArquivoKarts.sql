@@ -135,9 +135,36 @@ INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cl
 -- -----------------------------------------------------
 -- Inserção na tabela `compras`
 -- -----------------------------------------------------
-INSERT INTO
-  compras
-
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (58415041953343, 54806524944779, 70, 1484667778317, '27/05/2001');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (70786975411112, 59526398541733, 21, 49626798224043, '08/01/1986');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (13072940984189, 70685098851839, 75, 25738416752463, '25/03/1979');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (55704062019270, 89025783792831, 97, 46639324457635, '07/11/1979');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (13349478920963, 20171495491977, 99, 37028244530380, '03/09/1998');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (64576095128972, 46720142934651, 56, 62407669966959, '24/12/1978');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (34557448879703, 76447243377627, 51, 18811700501211, '11/05/1964');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (33182586897352, 79385631908707, 52, 82320400093082, '08/09/1959');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (59493980023057, 61136477133093, 52, 37792381977843, '08/06/1953');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (82083321913067, 89350417131030, 53, 87260707206999, '04/03/2016');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (11379647670528, 58211999907932, 62, 37366307165576, '07/05/1987');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (44675962816694, 23880280559043, 14, 82292302187746, '11/05/1971');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (95759870228334, 34233692883056, 79, 32054586536063, '12/12/2021');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (74381305834178, 32059950710114, 71, 96915046428203, '10/04/1959');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (41997193761465, 77271042821853, 68, 37307592767081, '23/05/2009');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (63756765087987, 30050983702585, 77, 95468196232288, '27/08/1967');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (70960638022294, 81752419462964, 93, 74508030118631, '22/12/1991');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (48573405898186, 39339096947470, 20, 42829799254130, '13/11/1995');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (82853045936132, 74642185224041, 70, 57314467593545, '19/12/1982');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (66213682877141, 60535499531100, 63, 6730543417450, '22/09/1957');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (31244933016292, 43033533953154, 52, 92459335879680, '08/09/1979');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (29445497277257, 21996003263362, 92, 51815950285434, '05/02/1981');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (4123919502089, 67009105282257, 34, 6601274780695, '19/12/1974');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (59969996420722, 43188729322560, 81, 93787275361720, '22/09/2017');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (30103766219782, 93841364793794, 15, 51051134305448, '17/05/2013');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (33492306317786, 3834119292331, 11, 49570758221600, '12/06/1990');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (74723998387464, 24963725906623, 96, 30254658192872, '24/02/2015');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (84057092116704, 43521078486401, 94, 42852102950553, '20/09/1997');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (29533180795721, 63032493220775, 66, 33964699983894, '07/09/1998');
+INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clientes_id_cliente, data_compra) VALUES (93943958416838, 77096094569864, 11, 80863929041076, '07/04/1996');
 
 
   --Update
