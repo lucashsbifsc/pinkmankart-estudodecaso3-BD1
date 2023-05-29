@@ -76,3 +76,15 @@ CREATE Table IF NOT EXISTS `compras` (
   PRIMARY KEY (`karts_id_kart`, `vendas_id_vendas`),
   CONSTRAINT `fk_karts_has_vendas_karts1` FOREIGN KEY (`karts_id_kart`) REFERENCES `karts` (`id_kart`) CONSTRAINT `fk_karts_has_vendas_vendas1` FOREIGN KEY (`vendas_id_vendas`) REFERENCES `vendas` (`id_vendas`)
 );
+
+INSERT INTO fornecedor
+
+INSERT INTO karts
+
+INSERT INTO funcionarios
+
+INSERT INTO clientes
+
+INSERT INTO vendas
+
+INSERT INTO compras
