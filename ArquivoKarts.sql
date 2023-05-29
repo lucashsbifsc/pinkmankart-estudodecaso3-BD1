@@ -487,3 +487,5 @@ INSERT INTO
   vendas
 INSERT INTO
   compras
+
+  --Update
