@@ -157,6 +157,20 @@ INSERT INTO
 -- Atualização na tabela `fornecdor`
 -- -----------------------------------------------------
 
+ --Delete
 
-  --Delete
+-- -----------------------------------------------------
+-- DELETE na tabela `Cliente`
+-- -----------------------------------------------------
 
+   DELETE FROM clientes WHERE id_cliente = 30;
+   DELETE FROM clientes WHERE id_cliente = 29;
+   DELETE FROM clientes WHERE id_cliente = 28;
+   DELETE FROM clientes WHERE id_cliente = 27;
+   DELETE FROM clientes WHERE id_cliente = 26; 
+
+
+<<<<<<< Updated upstream
+=======
+   
+>>>>>>> Stashed changes
