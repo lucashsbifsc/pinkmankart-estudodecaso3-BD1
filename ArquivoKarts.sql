@@ -109,10 +109,25 @@ INSERT INTO
 INSERT INTO
   compras
 
-  --Update
 
+
+  --Update
+    
+--------------------------------------------------------
+-- Atualização na tabela `clientes`
+-- -----------------------------------------------------
+
+  UPDATE clintes SET nome_completo= "Amanda Alves de Lima" WHERE id_cliente IN (20);
+  UPDATE clintes SET nome_completo= "Gabriele Ribeiro" WHERE id_cliente IN (21);
+  UPDATE clintes SET nome_completo= "Pietro Hofferman" WHERE id_cliente IN (22); 
+  UPDATE clintes SET nome_completo= "Lucas Lemes" WHERE id_cliente IN (23); 
+  UPDATE clintes SET nome_completo= "Guilherme Almeida" WHERE id_cliente IN (24); 
+  UPDATE clintes SET nome_completo= "Lucas Oliveira" WHERE id_cliente IN (25); 
+  
+--------------------------------------------------------
+-- Atualização na tabela `fornecdor`
+-- -----------------------------------------------------
 
 
   --Delete
 
-  
