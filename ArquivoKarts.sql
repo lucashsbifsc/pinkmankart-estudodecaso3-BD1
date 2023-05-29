@@ -507,3 +507,9 @@ INSERT INTO
   compras
 
   --Update
+
+
+
+  --Delete
+
+  
