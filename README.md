@@ -3,7 +3,7 @@
 
 ![Pinkman_Kart_512_512_px_1](https://github.com/lucashsbifsc/pinkmankart-estudodecaso3-BD1/assets/124683425/829feefb-4062-4ada-a6b7-028ebc5f8c8c)
 
-![Diagrama Karts (Versão FINAL PI)](https://github.com/lucashsbifsc/estudodecaso3-BD1/assets/124683425/a2d13ef6-de6e-4c7c-b41f-195f75b39f2d)
+![Diagrama Karts (Versão FINAL PI)](https://github.com/lucashsbifsc/pinkmankart-estudodecaso3-BD1/assets/124683425/1dae843d-4ab2-4bba-8992-6ee1466b70b9)
 
 **Instituto Federal de Santa Catarina - Campus Gaspar**<br>
 **Turma:** Informática - Fase 5<br>
