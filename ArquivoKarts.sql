@@ -1,4 +1,8 @@
+DROP DATABASE IF EXISTS diagrama_karts;
+
 CREATE DATABASE IF NOT EXISTS diagrama_karts;
+
+USE diagrama_karts;
 
 -- -----------------------------------------------------
 -- Table `fornecedor`
@@ -62,7 +66,8 @@ CREATE Table IF NOT EXISTS `vendas` (
   `clientes_id_cliente` INT NOT NULL,
   `valor_total` FLOAT NOT NULL,
   PRIMARY KEY AUTO_INCREMENT (`id_vendas`),
-  CONSTRAINT `fk_vendas_funcionarios1` FOREIGN KEY (`funcionarios_matricula`) REFERENCES `funcionarios` (`matricula`) CONSTRAINT `fk_vendas_clientes1` FOREIGN KEY (`clientes_id_cliente`) REFERENCES `clientes` (`id_cliente`)
+  CONSTRAINT `fk_vendas_funcionarios1` FOREIGN KEY (`funcionarios_matricula`) REFERENCES `funcionarios` (`matricula`),
+  CONSTRAINT `fk_vendas_clientes1` FOREIGN KEY (`clientes_id_cliente`) REFERENCES `clientes` (`id_cliente`)
 );
 
 -- -----------------------------------------------------
@@ -75,42 +80,43 @@ CREATE Table IF NOT EXISTS `compras` (
   `quantidade` INT(3) NOT NULL,
   `data_compra` DATETIME(8) NOT NULL,
   PRIMARY KEY AUTO_INCREMENT (`id_compras`),
-  CONSTRAINT `fk_karts_has_vendas_karts1` FOREIGN KEY (`karts_id_kart`) REFERENCES `karts` (`id_kart`) CONSTRAINT `fk_karts_has_vendas_vendas1` FOREIGN KEY (`vendas_id_vendas`) REFERENCES `vendas` (`id_vendas`)
+  CONSTRAINT `fk_karts_has_vendas_karts1` FOREIGN KEY (`karts_id_kart`) REFERENCES `karts` (`id_kart`),
+  CONSTRAINT `fk_karts_has_vendas_vendas1` FOREIGN KEY (`vendas_id_vendas`) REFERENCES `vendas` (`id_vendas`)
 );
 
 -- -----------------------------------------------------
 -- Inserção na tabela `fornecedor`
 -- -----------------------------------------------------
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (80584893791417, 'Abatz', '49035-296', '6506447239');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (64736926484180, 'Twimbo', '44924-008', '3635163605');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (50334467586818, 'Flashpoint', '49999-075', '2068416395');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (81683216606938, 'Cogibox', '52686-342', '7913256347');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (91724407837430, 'Yozio', '0904-6406', '8682875918');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (48325581286317, 'Roodel', '0268-1525', '3537142129');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (36180840066057, 'Rhynyx', '43353-742', '9405819849');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (93542953589069, 'Zoomcast', '67544-237', '3866805240');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (48147696534048, 'Wordify', '49999-115', '8117217713');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (32239849297317, 'Aivee', '53808-0659', '5856170489');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (90181543011687, 'Devshare', '54879-011', '3556628496');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (70974820940272, 'Roombo', '59779-578', '6262375809');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (41606908027094, 'Zoomlounge', '55926-0022', '4463193975');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (42055734180419, 'Twitterworks', '53808-0239', '1424783332');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (56060251629096, 'Twitternation', '51293-605', '1386882578');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (83031077871639, 'Dablist', '57520-0411', '3763186120');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (43035458657167, 'Skimia', '52125-373', '5562895336');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (58136182163095, 'Dabjam', '60505-2968', '6537143543');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (48855449897432, 'Rhycero', '0409-1778', '6931943391');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (401702561542, 'Youspan', '48951-1123', '9043971032');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (96160704771023, 'Bluezoom', '63736-013', '4095751345');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (51663115717740, 'Abata', '0904-6340', '4554635940');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (28324356754189, 'Buzzdog', '49817-0050', '4525835317');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (85892187158679, 'Edgeblab', '10544-109', '1378607778');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (94817259501371, 'Bluezoom', '49288-0254', '2082167447');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (58283210604843, 'Layo', '43419-381', '4541381139');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (58484734206621, 'Mydeo', '68752-022', '2317011831');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (87218138265292, 'Fadeo', '55312-120', '6402389537');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (909186396275, 'Plambee', '35617-399', '1047685030');
-INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (36354525738385, 'Brainsphere', '54575-907', '2748911289');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (80584893791417, 'Abatz', 49035296, 6506447239);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (64736926484180, 'Twimbo', 44924008, 3635163605);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (50334467586818, 'Flashpoint', 49999075, 2068416395);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (81683216606938, 'Cogibox', 52686342, 7913256347);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (91724407837430, 'Yozio', 09046406, 8682875918);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (48325581286317, 'Roodel', 02681525, 3537142129);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (36180840066057, 'Rhynyx', 43353742, 9405819849);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (93542953589069, 'Zoomcast', 67544237, 3866805240);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (48147696534048, 'Wordify', 49999115, 8117217713);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (32239849297317, 'Aivee', 538080659, 5856170489);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (90181543011687, 'Devshare', 54879011, 3556628496);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (70974820940272, 'Roombo', 59779578, 6262375809);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (41606908027094, 'Zoomlounge', 559260022, 4463193975);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (42055734180419, 'Twitterworks', 538080239, 1424783332);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (56060251629096, 'Twitternation', 51293605, 1386882578);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (83031077871639, 'Dablist', 575200411, 3763186120);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (43035458657167, 'Skimia', 52125373, 5562895336);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (58136182163095, 'Dabjam', 605052968, 6537143543);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (48855449897432, 'Rhycero', 04091778, 6931943391);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (401702561542, 'Youspan', 489511123, 9043971032);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (96160704771023, 'Bluezoom', 63736013, 4095751345);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (51663115717740, 'Abata', 09046340, 4554635940);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (28324356754189, 'Buzzdog', 498170050, 4525835317);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (85892187158679, 'Edgeblab', 10544109, 1378607778);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (94817259501371, 'Bluezoom', 492880254, 2082167447);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (58283210604843, 'Layo', 43419381, 4541381139);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (58484734206621, 'Mydeo', 68752022, 2317011831);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (87218138265292, 'Fadeo', 55312120, 6402389537);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (909186396275, 'Plambee', 35617399, 1047685030);
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (36354525738385, 'Brainsphere', 54575907, 2748911289);
 -- -----------------------------------------------------
 -- Inserção na tabela `karts`
 -- -----------------------------------------------------
@@ -147,36 +153,36 @@ INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, p
 -- -----------------------------------------------------
 -- Inserção na tabela `funcionarios`
 -- -----------------------------------------------------
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (343274448895, 505169798, 'Vidovic Croyser', '22/10/1996', 'Construction Expeditor', 'nCRK5C');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (78407238283, 116521102, 'Celisse Vines', '03/06/1988', 'Project Manager', 'ZhFIGht');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (17258890218, 561135781, 'Evyn Garfit', '17/07/1947', 'Surveyor', 'HZ1DmWDDVu');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (240702891391, 841368382, 'Urban Bignell', '05/03/1995', 'Project Manager', 'mwgMxXgGN');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (517473845394, 729731799, 'Barnett Waddilove', '14/11/1973', 'Construction Manager', 'nmP5uL');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (308605066431, 912815550, 'Gregory Vondruska', '13/01/1975', 'Engineer', '3fZFNGT');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (649433447647, 739021975, 'Felizio Floch', '31/07/1992', 'Construction Manager', '0SAzg3');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (72969392167, 963730508, 'Boyce Paske', '10/08/1989', 'Estimator', 'rcRaHfAIKT');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (26816589067, 956351102, 'Zach Pountain', '06/11/1932', 'Construction Expeditor', 'AujnTR8E1E');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (217620920849, 92062181, 'Tybi Otterwell', '27/02/1945', 'Construction Foreman', 'DnN6lnPVe7Qd');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (24588293509, 230313124, 'Rutger Clitsome', '04/12/2021', 'Construction Expeditor', 'XMogwKQ');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (684996625057, 875404482, 'Olenolin Keyho', '17/06/2017', 'Construction Manager', 'N3I2PiFSs');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (374339337377, 833763015, 'Danyelle Van Niekerk', '30/05/1901', 'Surveyor', 'YeQdQE8ZAN');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (421252077642, 322904050, 'Eugenie Lacroux', '30/12/1912', 'Surveyor', 'gwHFC7UB');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (258572839420, 879898874, 'Joycelin D''Aubney', '20/11/1959', 'Construction Foreman', 'mYLMTS');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (598296232858, 400097390, 'Salvatore Meikle', '17/07/1901', 'Construction Worker', 'O1qVoG9n');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (53509919033, 845745666, 'Grethel Litherland', '29/01/1929', 'Project Manager', 'tVjFGpXb9');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (542697038581, 915469434, 'Marchall Latch', '05/06/2010', 'Project Manager', 'bw3a0RDeA7');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (374564563798, 879712038, 'Ian Gladeche', '24/08/1947', 'Engineer', 'vW0i9dg23h5o');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (854750570112, 525000141, 'Dode Larkcum', '10/05/1944', 'Engineer', 'RtckAG8NAPsM');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (39259212899, 545151179, 'Bondie Moroney', '24/05/1961', 'Construction Foreman', 'g8lr7xF');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (831641212700, 415344261, 'Sisile Venditto', '03/06/1998', 'Construction Foreman', 'kjmKVvZc2YLp');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (400646031526, 977810480, 'Fabiano Ockleshaw', '19/11/1979', 'Engineer', '6MroE3');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (101963251547, 464656524, 'Chad Bruster', '04/01/2018', 'Surveyor', 'NwmZHmeX6JxI');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (158783648950, 424915185, 'Cynthie Lander', '08/02/1957', 'Architect', 'Xbz5fRKC');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (574075257753, 772317000, 'Katharine Guyon', '26/05/1908', 'Surveyor', 'fUCHdG93NC7R');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (953247217, 246104239, 'Bronnie Filkov', '09/02/1956', 'Subcontractor', '0HiACp');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (521482321464, 266704061, 'Dennie Garford', '12/05/1951', 'Construction Manager', 'yqn1eQxyL');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (930832511236, 84724742, 'Ethan Thaxton', '11/07/1976', 'Engineer', 'mM5x0DIxnyx');
-INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (50825891999, 912713954, 'Gertrude Bossom', '13/02/1958', 'Construction Manager', 'IMy8Qc');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (343274448895, 505169798, 'Vidovic Croyser', '22101996', 'Construction Expeditor', 'nCRK5C');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (78407238283, 116521102, 'Celisse Vines', '03061988', 'Project Manager', 'ZhFIGht');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (17258890218, 561135781, 'Evyn Garfit', '17071947', 'Surveyor', 'HZ1DmWDDVu');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (240702891391, 841368382, 'Urban Bignell', '05031995', 'Project Manager', 'mwgMxXgGN');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (517473845394, 729731799, 'Barnett Waddilove', '14111973', 'Construction Manager', 'nmP5uL');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (308605066431, 912815550, 'Gregory Vondruska', '13011975', 'Engineer', '3fZFNGT');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (649433447647, 739021975, 'Felizio Floch', '31071992', 'Construction Manager', '0SAzg3');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (72969392167, 963730508, 'Boyce Paske', '10081989', 'Estimator', 'rcRaHfAIKT');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (26816589067, 956351102, 'Zach Pountain', '06111932', 'Construction Expeditor', 'AujnTR8E1E');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (217620920849, 92062181, 'Tybi Otterwell', '27021945', 'Construction Foreman', 'DnN6lnPVe7Qd');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (24588293509, 230313124, 'Rutger Clitsome', '04122021', 'Construction Expeditor', 'XMogwKQ');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (684996625057, 875404482, 'Olenolin Keyho', '17062017', 'Construction Manager', 'N3I2PiFSs');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (374339337377, 833763015, 'Danyelle Van Niekerk', '30051901', 'Surveyor', 'YeQdQE8ZAN');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (421252077642, 322904050, 'Eugenie Lacroux', '30121912', 'Surveyor', 'gwHFC7UB');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (258572839420, 879898874, 'Joycelin D''Aubney', '20111959', 'Construction Foreman', 'mYLMTS');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (598296232858, 400097390, 'Salvatore Meikle', '17071901', 'Construction Worker', 'O1qVoG9n');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (53509919033, 845745666, 'Grethel Litherland', '29011929', 'Project Manager', 'tVjFGpXb9');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (542697038581, 915469434, 'Marchall Latch', '05062010', 'Project Manager', 'bw3a0RDeA7');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (374564563798, 879712038, 'Ian Gladeche', '24081947', 'Engineer', 'vW0i9dg23h5o');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (854750570112, 525000141, 'Dode Larkcum', '10051944', 'Engineer', 'RtckAG8NAPsM');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (39259212899, 545151179, 'Bondie Moroney', '24051961', 'Construction Foreman', 'g8lr7xF');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (831641212700, 415344261, 'Sisile Venditto', '03061998', 'Construction Foreman', 'kjmKVvZc2YLp');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (400646031526, 977810480, 'Fabiano Ockleshaw', '19111979', 'Engineer', '6MroE3');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (101963251547, 464656524, 'Chad Bruster', '04012018', 'Surveyor', 'NwmZHmeX6JxI');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (158783648950, 424915185, 'Cynthie Lander', '08021957', 'Architect', 'Xbz5fRKC');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (574075257753, 772317000, 'Katharine Guyon', '26051908', 'Surveyor', 'fUCHdG93NC7R');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (953247217, 246104239, 'Bronnie Filkov', '09021956', 'Subcontractor', '0HiACp');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (521482321464, 266704061, 'Dennie Garford', '12051951', 'Construction Manager', 'yqn1eQxyL');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (930832511236, 84724742, 'Ethan Thaxton', '11071976', 'Engineer', 'mM5x0DIxnyx');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (50825891999, 912713954, 'Gertrude Bossom', '13021958', 'Construction Manager', 'IMy8Qc');
 
 -- -----------------------------------------------------
 -- Inserção na tabela `clientes`
@@ -215,36 +221,36 @@ INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VAL
 -- -----------------------------------------------------
 -- Inserção na tabela `vendas`
 -- -----------------------------------------------------
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('27/09/2022', '8503418452', 82680227009705, 8159998674.37);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('03/04/2023', '9742754691', 24568883057582, 764244939.85);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('11/08/2022', '6599752993', 76452950016284, 272262174.82);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('02/04/2023', '5130261011', 98363411531040, 3213125493.95);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('28/05/2023', '4709128685', 83186021330051, 5482808083.24);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('17/06/2022', '8315247514', 61045853799452, 5797926834.34);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('10/03/2023', '5196450025', 40166273804472, 355085856.32);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('13/08/2022', '3398167195', 16116503161752, 5413373978.15);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('10/11/2022', '6691712560', 1323413885212, 8798686109.97);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('05/06/2022', '7142025115', 95840728542690, 6655506880.27);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('26/09/2022', '0848123603', 91658815664731, 4956400002.22);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('23/12/2022', '0666976570', 9817016847843, 2312281434.8);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('01/04/2023', '3431682707', 37092220765241, 3517187789.61);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('05/09/2022', '6225905855', 17561860775952, 6243798008.05);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('02/09/2022', '8967246315', 68904837517791, 9534734937.47);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('23/04/2023', '9134291695', 89144143201580, 7969371286.72);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('25/08/2022', '9140561534', 24119198727533, 9008908578.47);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('06/02/2023', '8079447314', 78494478228590, 1294402072.52);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('30/05/2022', '5078391037', 31921526487208, 6351031789.66);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('23/10/2022', '0182052028', 28368586634887, 8068853115.82);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('26/09/2022', '4099528731', 58929016400725, 4627051168.93);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('13/01/2023', '1020220198', 49610907791725, 5711988075.55);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('14/12/2022', '2310749125', 43034635162442, 3770189731.62);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('03/09/2022', '1599194058', 13366979919959, 1629897965.17);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('25/10/2022', '7678151756', 64545837242891, 7595088082.27);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('30/03/2023', '8343012380', 73203598635029, 9277055738.3);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('09/10/2022', '5726586565', 87274178494125, 5337484351.75);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('25/01/2023', '3013759321', 78635864102755, 535763656.24);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('03/04/2023', '0551065141', 26706593324870, 5208066119.15);
-INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('28/06/2022', '8658578097', 45917445060943, 9545492224.97);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('27/09/2022', 8503418452, 82680227009705, 8159998674.37);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('03/04/2023', 9742754691, 24568883057582, 764244939.85);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('11/08/2022', 6599752993, 76452950016284, 272262174.82);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('02/04/2023', 5130261011, 98363411531040, 3213125493.95);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('28/05/2023', 4709128685, 83186021330051, 5482808083.24);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('17/06/2022', 8315247514, 61045853799452, 5797926834.34);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('10/03/2023', 5196450025, 40166273804472, 355085856.32);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('13/08/2022', 3398167195, 16116503161752, 5413373978.15);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('10/11/2022', 6691712560, 1323413885212, 8798686109.97);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('05/06/2022', 7142025115, 95840728542690, 6655506880.27);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('26/09/2022', 0848123603, 91658815664731, 4956400002.22);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('23/12/2022', 0666976570, 9817016847843, 2312281434.8);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('01/04/2023', 3431682707, 37092220765241, 3517187789.61);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('05/09/2022', 6225905855, 17561860775952, 6243798008.05);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('02/09/2022', 8967246315, 68904837517791, 9534734937.47);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('23/04/2023', 9134291695, 89144143201580, 7969371286.72);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('25/08/2022', 9140561534, 24119198727533, 9008908578.47);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('06/02/2023', 8079447314, 78494478228590, 1294402072.52);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('30/05/2022', 5078391037, 31921526487208, 6351031789.66);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('23/10/2022', 0182052028, 28368586634887, 8068853115.82);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('26/09/2022', 4099528731, 58929016400725, 4627051168.93);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('13/01/2023', 1020220198, 49610907791725, 5711988075.55);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('14/12/2022', 2310749125, 43034635162442, 3770189731.62);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('03/09/2022', 1599194058, 13366979919959, 1629897965.17);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('25/10/2022', 7678151756, 64545837242891, 7595088082.27);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('30/03/2023', 8343012380, 73203598635029, 9277055738.3);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('09/10/2022', 5726586565, 87274178494125, 5337484351.75);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('25/01/2023', 3013759321, 78635864102755, 535763656.24);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('03/04/2023', 0551065141, 26706593324870, 5208066119.15);
+INSERT INTO vendas (id_vendas, data_venda, funcionario_matricula, clientes_id_cliente, valor_total) VALUES ('28/06/2022', 8658578097, 45917445060943, 9545492224.97);
 
 -- -----------------------------------------------------
 -- Inserção na tabela `compras`
