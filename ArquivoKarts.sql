@@ -364,11 +364,11 @@ INSERT INTO compras (karts_id_kart, vendas_id_vendas, quantidade, clientes_id_cl
 -- DELETE na tabela `fornecedor`
 -- -----------------------------------------------------
 
-   DELETE FROM fornecedor WHERE id_fornecedor = 30;
-   DELETE FROM fornecedor WHERE id_fornecedor = 29;
-   DELETE FROM fornecedor WHERE id_fornecedor = 28;
-   DELETE FROM fornecedor WHERE id_fornecedor = 27;
-   DELETE FROM fornecedor WHERE id_fornecedor = 26;
+   DELETE FROM fornecedor WHERE cnpj = 30;
+   DELETE FROM fornecedor WHERE cnpj = 29;
+   DELETE FROM fornecedor WHERE cnpj = 28;
+   DELETE FROM fornecedor WHERE cnpj = 27;
+   DELETE FROM fornecedor WHERE cnpj = 26;
  
 -- -----------------------------------------------------
 -- DELETE na tabela `kart`
@@ -384,11 +384,11 @@ INSERT INTO compras (karts_id_kart, vendas_id_vendas, quantidade, clientes_id_cl
 -- DELETE na tabela `funcionarios`
 -- -----------------------------------------------------
 
-   DELETE FROM funcionario WHERE id_funcionario = 30;
-   DELETE FROM funcionario WHERE id_funcionario = 29;
-   DELETE FROM funcionario WHERE id_funcionario = 28;
-   DELETE FROM funcionario WHERE id_funcionario = 27;
-   DELETE FROM funcionario WHERE id_funcionario = 26;
+   DELETE FROM funcionario WHERE matricula = 30;
+   DELETE FROM funcionario WHERE matricula = 29;
+   DELETE FROM funcionario WHERE matricula = 28;
+   DELETE FROM funcionario WHERE matricula = 27;
+   DELETE FROM funcionario WHERE matricula = 26;
 
 -- -----------------------------------------------------
 -- DELETE na tabela `compras`
