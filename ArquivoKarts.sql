@@ -60,7 +60,7 @@ CREATE Table IF NOT EXISTS `vendas` (
   `data_venda` DATETIME(8) NOT NULL,
   `funcionarios_matricula` INT(11) NOT NULL,
   `clientes_id_cliente` INT NOT NULL,
-  cnpj `valor_total` FLOAT NOT NULL,
+  `valor_total` FLOAT NOT NULL,
   PRIMARY KEY AUTO_INCREMENT (`id_vendas`),
   CONSTRAINT `fk_vendas_funcionarios1` FOREIGN KEY (`funcionarios_matricula`) REFERENCES `funcionarios` (`matricula`) CONSTRAINT `fk_vendas_clientes1` FOREIGN KEY (`clientes_id_cliente`) REFERENCES `clientes` (`id_cliente`)
 );
