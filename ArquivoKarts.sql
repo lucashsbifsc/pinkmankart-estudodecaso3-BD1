@@ -181,7 +181,7 @@ INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clie
   UPDATE clintes SET nome_completo= "Lucas Oliveira" WHERE id_cliente IN (25); 
   
 --------------------------------------------------------
--- Atualização na tabela `fornecdor`
+-- Atualização na tabela `fornecedor`
 -- -----------------------------------------------------
 
  --Delete
@@ -196,7 +196,55 @@ INSERT INTO compras (karts_id_kart, data_vendavendas_id_vendas, quantidade, clie
    DELETE FROM clientes WHERE id_cliente = 27;
    DELETE FROM clientes WHERE id_cliente = 26; 
 
+-- -----------------------------------------------------
+-- DELETE na tabela `fornecedor`
+-- -----------------------------------------------------
 
+   DELETE FROM fornecedor WHERE id_fornecedor = 30;
+   DELETE FROM fornecedor WHERE id_fornecedor = 29;
+   DELETE FROM fornecedor WHERE id_fornecedor = 28;
+   DELETE FROM fornecedor WHERE id_fornecedor = 27;
+   DELETE FROM fornecedor WHERE id_fornecedor = 26;
+ 
+-- -----------------------------------------------------
+-- DELETE na tabela `kart`
+-- -----------------------------------------------------
+ 
+   DELETE FROM kart WHERE id_kart = 30;
+   DELETE FROM kart WHERE id_kart = 29;
+   DELETE FROM kart WHERE id_kart = 28;
+   DELETE FROM kart WHERE id_kart = 27;
+   DELETE FROM kart WHERE id_kart = 26;
+
+-- -----------------------------------------------------
+-- DELETE na tabela `funcionarios`
+-- -----------------------------------------------------
+
+   DELETE FROM funcionario WHERE id_funcionario = 30;
+   DELETE FROM funcionario WHERE id_funcionario = 29;
+   DELETE FROM funcionario WHERE id_funcionario = 28;
+   DELETE FROM funcionario WHERE id_funcionario = 27;
+   DELETE FROM funcionario WHERE id_funcionario = 26;
+
+-- -----------------------------------------------------
+-- DELETE na tabela `compras`
+-- -----------------------------------------------------
+
+   DELETE FROM compras WHERE id_compras = 30;
+   DELETE FROM compras WHERE id_compras = 29;
+   DELETE FROM compras WHERE id_compras = 28;
+   DELETE FROM compras WHERE id_compras = 27;
+   DELETE FROM compras WHERE id_compras = 26;
+
+-- -----------------------------------------------------
+-- DELETE na tabela `vendas`
+-- -----------------------------------------------------   
+
+   DELETE FROM vendas WHERE id_vendas = 30;
+   DELETE FROM vendas WHERE id_vendas = 29;
+   DELETE FROM vendas WHERE id_vendas = 28;
+   DELETE FROM vendas WHERE id_vendas = 27;
+   DELETE FROM vendas WHERE id_vendas = 26
 <<<<<<< Updated upstream
 =======
    
