@@ -81,74 +81,103 @@ CREATE Table IF NOT EXISTS `compras` (
 -- -----------------------------------------------------
 -- Inserção na tabela `fornecedor`
 -- -----------------------------------------------------
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (80584893791417, 'Abatz', '49035-296', '6506447239');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (64736926484180, 'Twimbo', '44924-008', '3635163605');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (50334467586818, 'Flashpoint', '49999-075', '2068416395');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (81683216606938, 'Cogibox', '52686-342', '7913256347');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (91724407837430, 'Yozio', '0904-6406', '8682875918');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (48325581286317, 'Roodel', '0268-1525', '3537142129');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (36180840066057, 'Rhynyx', '43353-742', '9405819849');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (93542953589069, 'Zoomcast', '67544-237', '3866805240');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (48147696534048, 'Wordify', '49999-115', '8117217713');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (32239849297317, 'Aivee', '53808-0659', '5856170489');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (90181543011687, 'Devshare', '54879-011', '3556628496');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (70974820940272, 'Roombo', '59779-578', '6262375809');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (41606908027094, 'Zoomlounge', '55926-0022', '4463193975');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (42055734180419, 'Twitterworks', '53808-0239', '1424783332');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (56060251629096, 'Twitternation', '51293-605', '1386882578');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (83031077871639, 'Dablist', '57520-0411', '3763186120');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (43035458657167, 'Skimia', '52125-373', '5562895336');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (58136182163095, 'Dabjam', '60505-2968', '6537143543');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (48855449897432, 'Rhycero', '0409-1778', '6931943391');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (401702561542, 'Youspan', '48951-1123', '9043971032');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (96160704771023, 'Bluezoom', '63736-013', '4095751345');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (51663115717740, 'Abata', '0904-6340', '4554635940');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (28324356754189, 'Buzzdog', '49817-0050', '4525835317');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (85892187158679, 'Edgeblab', '10544-109', '1378607778');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (94817259501371, 'Bluezoom', '49288-0254', '2082167447');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (58283210604843, 'Layo', '43419-381', '4541381139');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (58484734206621, 'Mydeo', '68752-022', '2317011831');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (87218138265292, 'Fadeo', '55312-120', '6402389537');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (909186396275, 'Plambee', '35617-399', '1047685030');
-insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (36354525738385, 'Brainsphere', '54575-907', '2748911289');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (80584893791417, 'Abatz', '49035-296', '6506447239');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (64736926484180, 'Twimbo', '44924-008', '3635163605');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (50334467586818, 'Flashpoint', '49999-075', '2068416395');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (81683216606938, 'Cogibox', '52686-342', '7913256347');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (91724407837430, 'Yozio', '0904-6406', '8682875918');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (48325581286317, 'Roodel', '0268-1525', '3537142129');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (36180840066057, 'Rhynyx', '43353-742', '9405819849');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (93542953589069, 'Zoomcast', '67544-237', '3866805240');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (48147696534048, 'Wordify', '49999-115', '8117217713');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (32239849297317, 'Aivee', '53808-0659', '5856170489');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (90181543011687, 'Devshare', '54879-011', '3556628496');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (70974820940272, 'Roombo', '59779-578', '6262375809');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (41606908027094, 'Zoomlounge', '55926-0022', '4463193975');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (42055734180419, 'Twitterworks', '53808-0239', '1424783332');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (56060251629096, 'Twitternation', '51293-605', '1386882578');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (83031077871639, 'Dablist', '57520-0411', '3763186120');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (43035458657167, 'Skimia', '52125-373', '5562895336');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (58136182163095, 'Dabjam', '60505-2968', '6537143543');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (48855449897432, 'Rhycero', '0409-1778', '6931943391');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (401702561542, 'Youspan', '48951-1123', '9043971032');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (96160704771023, 'Bluezoom', '63736-013', '4095751345');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (51663115717740, 'Abata', '0904-6340', '4554635940');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (28324356754189, 'Buzzdog', '49817-0050', '4525835317');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (85892187158679, 'Edgeblab', '10544-109', '1378607778');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (94817259501371, 'Bluezoom', '49288-0254', '2082167447');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (58283210604843, 'Layo', '43419-381', '4541381139');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (58484734206621, 'Mydeo', '68752-022', '2317011831');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (87218138265292, 'Fadeo', '55312-120', '6402389537');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (909186396275, 'Plambee', '35617-399', '1047685030');
+INSERT INTO fornecedor (cnpj, nome_empresa, cep, telefone) VALUES (36354525738385, 'Brainsphere', '54575-907', '2748911289');
 -- -----------------------------------------------------
 -- Inserção na tabela `karts`
 -- -----------------------------------------------------
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (1, 'Blue', 'Amanti', 'Kia', '05/21/1973', 41, '01/30/1952', 269371047.28);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (2, 'Purple', 'Yukon XL 2500', 'GMC', '07/19/1902', 73, '04/17/1995', 574575536.26);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (3, 'Khaki', 'B-Series', 'Mazda', '10/15/1928', 76, '08/06/2008', 46064345.13);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (4, 'Yellow', 'X5 M', 'BMW', '04/21/1966', 45, '12/15/2007', 769673924.18);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (5, 'Teal', 'Grand Vitara', 'Suzuki', '09/17/2016', 95, '05/17/1984', 318887065.15);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (6, 'Red', '5 Series', 'BMW', '12/15/1952', 27, '02/18/1974', 187907114.41);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (7, 'Orange', 'Estate', 'Buick', '05/10/1980', 65, '10/28/1976', 818579779.72);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (8, 'Fuscia', 'Silverado 2500', 'Chevrolet', '02/19/1997', 52, '11/14/2019', 534793721.02);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (9, 'Green', 'Silverado', 'Chevrolet', '08/06/1999', 23, '09/05/1972', 427337661.14);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (10, 'Indigo', 'Grand Marquis', 'Mercury', '06/05/1902', 75, '01/05/1992', 383690327.89);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (11, 'Crimson', 'Express 1500', 'Chevrolet', '08/20/2004', 92, '10/02/2019', 910456457.39);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (12, 'Pink', 'Tundra', 'Mitsubishi', '10/14/1907', 46, '03/27/1954', 828846084.98);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (13, 'Orange', 'Lancer Evolution', 'Mitsubishi', '10/02/1953', 11, '03/05/1931', 9486942.62);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (14, 'Fuscia', 'XJ', 'Jaguar', '05/19/2007', 77, '04/07/2003', 202126165.39);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (15, 'Blue', 'Ram 1500', 'Dodge', '05/09/1903', 21, '12/02/1955', 975531198.68);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (16, 'Mauv', 'Crown Victoria', 'Ford', '07/27/2014', 57, '12/07/1923', 870064403.29);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (17, 'Goldenrod', 'Discovery', 'Land Rover', '11/19/1908', 73, '02/17/1968', 22939547.65);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (18, 'Turquoise', 'FJ Cruiser', 'Toyota', '06/13/1937', 68, '11/23/2011', 811548084.97);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (19, 'Maroon', 'Explorer', 'Ford', '02/26/2000', 40, '04/09/2013', 739781246.46);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (20, 'Orange', '5000CS Quattro', 'Audi', '04/25/1909', 41, '06/23/2011', 280438192.92);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (21, 'Maroon', 'Terraza', 'Buick', '09/24/1979', 31, '03/27/1906', 594526695.36);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (22, 'Purple', '323', 'Mazda', '04/17/1930', 9, '12/07/1912', 712963290.17);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (23, 'Puce', 'S4', 'Audi', '12/18/1973', 36, '09/05/1985', 797272768.51);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (24, 'Orange', 'Range Rover', 'Land Rover', '07/12/1992', 83, '05/04/1979', 849259251.92);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (25, 'Violet', '6 Series', 'BMW', '09/07/2001', 88, '06/22/2012', 54073076.06);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (26, 'Puce', 'Tempo', 'Ford', '06/30/1910', 67, '10/21/1996', 427455575.43);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (27, 'Orange', 'Tahoe', 'Chevrolet', '04/15/1953', 55, '03/23/1946', 285706093.16);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (28, 'Pink', 'Blazer', 'Chevrolet', '03/04/1979', 93, '01/24/1975', 827080779.88);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (29, 'Orange', 'Express 3500', 'Chevrolet', '07/25/1957', 34, '06/08/1901', 647891729.1);
-INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (30, 'Crimson', 'Mustang', 'Ford', '11/05/1928', 12, '10/14/1984', 952695683.77);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Blue', 'Amanti', 'Kia', '05/21/1973', 41, '01/30/1952', 269371047.28);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Purple', 'Yukon XL 2500', 'GMC', '07/19/1902', 73, '04/17/1995', 574575536.26);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Khaki', 'B-Series', 'Mazda', '10/15/1928', 76, '08/06/2008', 46064345.13);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Yellow', 'X5 M', 'BMW', '04/21/1966', 45, '12/15/2007', 769673924.18);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Teal', 'Grand Vitara', 'Suzuki', '09/17/2016', 95, '05/17/1984', 318887065.15);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Red', '5 Series', 'BMW', '12/15/1952', 27, '02/18/1974', 187907114.41);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Orange', 'Estate', 'Buick', '05/10/1980', 65, '10/28/1976', 818579779.72);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Fuscia', 'Silverado 2500', 'Chevrolet', '02/19/1997', 52, '11/14/2019', 534793721.02);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Green', 'Silverado', 'Chevrolet', '08/06/1999', 23, '09/05/1972', 427337661.14);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Indigo', 'Grand Marquis', 'Mercury', '06/05/1902', 75, '01/05/1992', 383690327.89);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Crimson', 'Express 1500', 'Chevrolet', '08/20/2004', 92, '10/02/2019', 910456457.39);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Pink', 'Tundra', 'Mitsubishi', '10/14/1907', 46, '03/27/1954', 828846084.98);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Orange', 'Lancer Evolution', 'Mitsubishi', '10/02/1953', 11, '03/05/1931', 9486942.62);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Fuscia', 'XJ', 'Jaguar', '05/19/2007', 77, '04/07/2003', 202126165.39);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Blue', 'Ram 1500', 'Dodge', '05/09/1903', 21, '12/02/1955', 975531198.68);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Mauv', 'Crown Victoria', 'Ford', '07/27/2014', 57, '12/07/1923', 870064403.29);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Goldenrod', 'Discovery', 'Land Rover', '11/19/1908', 73, '02/17/1968', 22939547.65);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Turquoise', 'FJ Cruiser', 'Toyota', '06/13/1937', 68, '11/23/2011', 811548084.97);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Maroon', 'Explorer', 'Ford', '02/26/2000', 40, '04/09/2013', 739781246.46);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Orange', '5000CS Quattro', 'Audi', '04/25/1909', 41, '06/23/2011', 280438192.92);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Maroon', 'Terraza', 'Buick', '09/24/1979', 31, '03/27/1906', 594526695.36);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Purple', '323', 'Mazda', '04/17/1930', 9, '12/07/1912', 712963290.17);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Puce', 'S4', 'Audi', '12/18/1973', 36, '09/05/1985', 797272768.51);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Orange', 'Range Rover', 'Land Rover', '07/12/1992', 83, '05/04/1979', 849259251.92);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Violet', '6 Series', 'BMW', '09/07/2001', 88, '06/22/2012', 54073076.06);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Puce', 'Tempo', 'Ford', '06/30/1910', 67, '10/21/1996', 427455575.43);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Orange', 'Tahoe', 'Chevrolet', '04/15/1953', 55, '03/23/1946', 285706093.16);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Pink', 'Blazer', 'Chevrolet', '03/04/1979', 93, '01/24/1975', 827080779.88);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Orange', 'Express 3500', 'Chevrolet', '07/25/1957', 34, '06/08/1901', 647891729.1);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES ('Crimson', 'Mustang', 'Ford', '11/05/1928', 12, '10/14/1984', 952695683.77);
 -- -----------------------------------------------------
 -- Inserção na tabela `funcionarios`
 -- -----------------------------------------------------
-INSERT INTO
-  funcionarios
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (343274448895, 505169798, 'Vidovic Croyser', '22/10/1996', 'Construction Expeditor', 'nCRK5C');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (78407238283, 116521102, 'Celisse Vines', '03/06/1988', 'Project Manager', 'ZhFIGht');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (17258890218, 561135781, 'Evyn Garfit', '17/07/1947', 'Surveyor', 'HZ1DmWDDVu');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (240702891391, 841368382, 'Urban Bignell', '05/03/1995', 'Project Manager', 'mwgMxXgGN');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (517473845394, 729731799, 'Barnett Waddilove', '14/11/1973', 'Construction Manager', 'nmP5uL');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (308605066431, 912815550, 'Gregory Vondruska', '13/01/1975', 'Engineer', '3fZFNGT');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (649433447647, 739021975, 'Felizio Floch', '31/07/1992', 'Construction Manager', '0SAzg3');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (72969392167, 963730508, 'Boyce Paske', '10/08/1989', 'Estimator', 'rcRaHfAIKT');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (26816589067, 956351102, 'Zach Pountain', '06/11/1932', 'Construction Expeditor', 'AujnTR8E1E');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (217620920849, 92062181, 'Tybi Otterwell', '27/02/1945', 'Construction Foreman', 'DnN6lnPVe7Qd');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (24588293509, 230313124, 'Rutger Clitsome', '04/12/2021', 'Construction Expeditor', 'XMogwKQ');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (684996625057, 875404482, 'Olenolin Keyho', '17/06/2017', 'Construction Manager', 'N3I2PiFSs');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (374339337377, 833763015, 'Danyelle Van Niekerk', '30/05/1901', 'Surveyor', 'YeQdQE8ZAN');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (421252077642, 322904050, 'Eugenie Lacroux', '30/12/1912', 'Surveyor', 'gwHFC7UB');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (258572839420, 879898874, 'Joycelin D''Aubney', '20/11/1959', 'Construction Foreman', 'mYLMTS');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (598296232858, 400097390, 'Salvatore Meikle', '17/07/1901', 'Construction Worker', 'O1qVoG9n');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (53509919033, 845745666, 'Grethel Litherland', '29/01/1929', 'Project Manager', 'tVjFGpXb9');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (542697038581, 915469434, 'Marchall Latch', '05/06/2010', 'Project Manager', 'bw3a0RDeA7');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (374564563798, 879712038, 'Ian Gladeche', '24/08/1947', 'Engineer', 'vW0i9dg23h5o');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (854750570112, 525000141, 'Dode Larkcum', '10/05/1944', 'Engineer', 'RtckAG8NAPsM');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (39259212899, 545151179, 'Bondie Moroney', '24/05/1961', 'Construction Foreman', 'g8lr7xF');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (831641212700, 415344261, 'Sisile Venditto', '03/06/1998', 'Construction Foreman', 'kjmKVvZc2YLp');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (400646031526, 977810480, 'Fabiano Ockleshaw', '19/11/1979', 'Engineer', '6MroE3');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (101963251547, 464656524, 'Chad Bruster', '04/01/2018', 'Surveyor', 'NwmZHmeX6JxI');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (158783648950, 424915185, 'Cynthie Lander', '08/02/1957', 'Architect', 'Xbz5fRKC');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (574075257753, 772317000, 'Katharine Guyon', '26/05/1908', 'Surveyor', 'fUCHdG93NC7R');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (953247217, 246104239, 'Bronnie Filkov', '09/02/1956', 'Subcontractor', '0HiACp');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (521482321464, 266704061, 'Dennie Garford', '12/05/1951', 'Construction Manager', 'yqn1eQxyL');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (930832511236, 84724742, 'Ethan Thaxton', '11/07/1976', 'Engineer', 'mM5x0DIxnyx');
+INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo, senha) VALUES (50825891999, 912713954, 'Gertrude Bossom', '13/02/1958', 'Construction Manager', 'IMy8Qc');
+
 -- -----------------------------------------------------
 -- Inserção na tabela `clientes`
 -- -----------------------------------------------------
@@ -351,8 +380,5 @@ INSERT INTO compras (karts_id_kart, vendas_id_vendas, quantidade, clientes_id_cl
    DELETE FROM vendas WHERE id_vendas = 29;
    DELETE FROM vendas WHERE id_vendas = 28;
    DELETE FROM vendas WHERE id_vendas = 27;
-   DELETE FROM vendas WHERE id_vendas = 26
-<<<<<<< Updated upstream
-=======
+   DELETE FROM vendas WHERE id_vendas = 26;
    
->>>>>>> Stashed changes
