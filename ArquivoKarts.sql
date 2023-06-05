@@ -181,8 +181,36 @@ INSERT INTO funcionarios (matricula, cpf, nome_completo, data_nascimento, cargo,
 -- -----------------------------------------------------
 -- Inserção na tabela `clientes`
 -- -----------------------------------------------------
-
-
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Lane Sanbroke', '11/18/1953', 40426168353588, 11121366585);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Stearne Aldwick', '10/19/1941', 99305333659392, 65533156549);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Jan Mennithorp', '04/16/1959', 97890698398156, 4686568125);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Maris Webland', '02/09/1969', 56154681655742, 36953114893);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Toma Esom', '10/17/1999', 79624704963510, 76880969356);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Ikey Spyer', '11/07/1917', 78359615705485, 42571664366);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Forster Grindle', '11/21/1969', 26986569093262, 29936228586);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Myriam Jarrard', '02/27/1968', 82367225004665, 62497261654);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Nataline Labro', '06/22/1985', 86504768990634, 56121664879);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Perle Dennehy', '07/13/1986', 69151761661225, 49934907587);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Edsel Rizzi', '11/25/1960', 8850207778002, 8593526271);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Bennett Craggs', '03/06/1910', 95969594516477, 30277095265);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Kaila Ludovici', '09/11/2021', 13214042151194, 19327062582);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Pru Winders', '06/07/1928', 99564296440135, 61912887753);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Biddy Leneve', '03/09/1969', 98086863151615, 41350575889);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Heinrick Abbis', '02/12/1939', 31292341797838, 79416537222);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Mick Jerschke', '07/30/1934', 949995462604, 80198062920);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Lenard Galliard', '12/30/1924', 69719593128575, 87140912818);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Doralynn Pevreal', '01/31/1987', 71875137127796, 33219800048);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Gabby Linnock', '01/23/1911', 23937040229189, 86637848366);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Avigdor Hodjetts', '01/28/2001', 20738005164220, 24586769197);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Rog Bottoner', '04/04/1968', 58421871698050, 61277792148);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Ania Cheeld', '05/27/1949', 91811081853221, 50854800524);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Jacinda Sargeant', '07/27/1926', 43948666947055, 9702507946);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Kipp Epple', '07/16/1964', 57412027921757, 40558190478);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Conant Hatley', '12/29/1994', 67366840693929, 35315874411);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Idette Vallentin', '07/25/1962', 77686328560250, 50493611763);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Connor Ivory', '12/30/2014', 45462841573911, 43252941093);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Stevana Rodman', '11/18/2019', 40656334743843, 36725080596);
+INSERT INTO clientes (id_cliente, nome_Completo, data_Nascimento, cnpj, cpf) VALUES ('Kellie Aylott', '11/14/1969', 5104493639694, 17441269794);
 
 -- -----------------------------------------------------
 -- Inserção na tabela `vendas`
