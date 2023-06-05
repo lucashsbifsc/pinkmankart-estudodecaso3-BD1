@@ -23,7 +23,7 @@ CREATE Table IF NOT EXISTS `karts` (
   `quantidade` INT(3) NOT NULL,
   `data_entrada` DATETIME(8) NOT NULL,
   `fornecedor_cpnj` INT(14) NOT NULL,
-  PRIMARY KEY (`id_kart`) AUTO_INCREMENT,
+  PRIMARY KEY AUTO_INCREMENT (`id_kart`),
   CONSTRAINT `fk_karts_fornecedor` FOREIGN KEY (`fornecedor_cpnj`) REFERENCES `fornecedor` (`cpnj`)
 );
 
@@ -44,12 +44,12 @@ CREATE Table IF NOT EXISTS `funcionarios` (
 -- Table `clientes`
 -- -----------------------------------------------------
 CREATE Table IF NOT EXISTS `clientes` (
-  `id_cliente` INT NOT NULL AUTO_INCREMENT,
+  `id_cliente` INT NOT NULL,
   `nome_completo` VARCHAR(80) NOT NULL,
   `data_nascimento` DATETIME(8) NOT NULL,
   `cnpj` INT(12) NULL,
   `cpf` INT(11) NULL,
-  PRIMARY KEY (`id_cliente`) AUTO_INCREMENT
+  PRIMARY KEY AUTO_INCREMENT (`id_cliente`)
 );
 
 -- -----------------------------------------------------primeiro_nome
@@ -61,7 +61,7 @@ CREATE Table IF NOT EXISTS `vendas` (
   `funcionarios_matricula` INT(11) NOT NULL,
   `clientes_id_cliente` INT NOT NULL,
   cnpj `valor_total` FLOAT NOT NULL,
-  PRIMARY KEY (`id_vendas`) AUTO_INCREMENT,
+  PRIMARY KEY AUTO_INCREMENT (`id_vendas`),
   CONSTRAINT `fk_vendas_funcionarios1` FOREIGN KEY (`funcionarios_matricula`) REFERENCES `funcionarios` (`matricula`) CONSTRAINT `fk_vendas_clientes1` FOREIGN KEY (`clientes_id_cliente`) REFERENCES `clientes` (`id_cliente`)
 );
 
@@ -74,7 +74,7 @@ CREATE Table IF NOT EXISTS `compras` (
   `vendas_id_vendas` INT NOT NULL,
   `quantidade` INT(3) NOT NULL,
   `data_compra` DATETIME(8) NOT NULL,
-  PRIMARY KEY (`id_compras`) AUTO_INCREMENT,
+  PRIMARY KEY AUTO_INCREMENT (`id_compras`),
   CONSTRAINT `fk_karts_has_vendas_karts1` FOREIGN KEY (`karts_id_kart`) REFERENCES `karts` (`id_kart`) CONSTRAINT `fk_karts_has_vendas_vendas1` FOREIGN KEY (`vendas_id_vendas`) REFERENCES `vendas` (`id_vendas`)
 );
 
