@@ -114,8 +114,36 @@ insert into fornecedor (cnpj, nome_empresa, cep, telefone) values (3635452573838
 -- -----------------------------------------------------
 -- Inserção na tabela `karts`
 -- -----------------------------------------------------
-INSERT INTO
-  karts
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (1, 'Blue', 'Amanti', 'Kia', '05/21/1973', 41, '01/30/1952', 269371047.28);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (2, 'Purple', 'Yukon XL 2500', 'GMC', '07/19/1902', 73, '04/17/1995', 574575536.26);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (3, 'Khaki', 'B-Series', 'Mazda', '10/15/1928', 76, '08/06/2008', 46064345.13);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (4, 'Yellow', 'X5 M', 'BMW', '04/21/1966', 45, '12/15/2007', 769673924.18);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (5, 'Teal', 'Grand Vitara', 'Suzuki', '09/17/2016', 95, '05/17/1984', 318887065.15);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (6, 'Red', '5 Series', 'BMW', '12/15/1952', 27, '02/18/1974', 187907114.41);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (7, 'Orange', 'Estate', 'Buick', '05/10/1980', 65, '10/28/1976', 818579779.72);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (8, 'Fuscia', 'Silverado 2500', 'Chevrolet', '02/19/1997', 52, '11/14/2019', 534793721.02);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (9, 'Green', 'Silverado', 'Chevrolet', '08/06/1999', 23, '09/05/1972', 427337661.14);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (10, 'Indigo', 'Grand Marquis', 'Mercury', '06/05/1902', 75, '01/05/1992', 383690327.89);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (11, 'Crimson', 'Express 1500', 'Chevrolet', '08/20/2004', 92, '10/02/2019', 910456457.39);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (12, 'Pink', 'Tundra', 'Mitsubishi', '10/14/1907', 46, '03/27/1954', 828846084.98);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (13, 'Orange', 'Lancer Evolution', 'Mitsubishi', '10/02/1953', 11, '03/05/1931', 9486942.62);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (14, 'Fuscia', 'XJ', 'Jaguar', '05/19/2007', 77, '04/07/2003', 202126165.39);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (15, 'Blue', 'Ram 1500', 'Dodge', '05/09/1903', 21, '12/02/1955', 975531198.68);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (16, 'Mauv', 'Crown Victoria', 'Ford', '07/27/2014', 57, '12/07/1923', 870064403.29);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (17, 'Goldenrod', 'Discovery', 'Land Rover', '11/19/1908', 73, '02/17/1968', 22939547.65);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (18, 'Turquoise', 'FJ Cruiser', 'Toyota', '06/13/1937', 68, '11/23/2011', 811548084.97);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (19, 'Maroon', 'Explorer', 'Ford', '02/26/2000', 40, '04/09/2013', 739781246.46);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (20, 'Orange', '5000CS Quattro', 'Audi', '04/25/1909', 41, '06/23/2011', 280438192.92);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (21, 'Maroon', 'Terraza', 'Buick', '09/24/1979', 31, '03/27/1906', 594526695.36);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (22, 'Purple', '323', 'Mazda', '04/17/1930', 9, '12/07/1912', 712963290.17);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (23, 'Puce', 'S4', 'Audi', '12/18/1973', 36, '09/05/1985', 797272768.51);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (24, 'Orange', 'Range Rover', 'Land Rover', '07/12/1992', 83, '05/04/1979', 849259251.92);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (25, 'Violet', '6 Series', 'BMW', '09/07/2001', 88, '06/22/2012', 54073076.06);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (26, 'Puce', 'Tempo', 'Ford', '06/30/1910', 67, '10/21/1996', 427455575.43);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (27, 'Orange', 'Tahoe', 'Chevrolet', '04/15/1953', 55, '03/23/1946', 285706093.16);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (28, 'Pink', 'Blazer', 'Chevrolet', '03/04/1979', 93, '01/24/1975', 827080779.88);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (29, 'Orange', 'Express 3500', 'Chevrolet', '07/25/1957', 34, '06/08/1901', 647891729.1);
+INSERT INTO karts (id_Kart, cor, modelo, marca, ano, quantidade, data_Entrada, preco) VALUES (30, 'Crimson', 'Mustang', 'Ford', '11/05/1928', 12, '10/14/1984', 952695683.77);
 -- -----------------------------------------------------
 -- Inserção na tabela `funcionarios`
 -- -----------------------------------------------------
