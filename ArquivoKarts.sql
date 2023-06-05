@@ -237,9 +237,59 @@ INSERT INTO compras (karts_id_kart, vendas_id_vendas, quantidade, clientes_id_cl
   UPDATE clintes SET nome_completo= "Guilherme Almeida" WHERE id_cliente IN (24); 
   UPDATE clintes SET nome_completo= "Lucas Oliveira" WHERE id_cliente IN (25); 
   
---------------------------------------------------------
--- Atualização na tabela `fornecedor`
--- -----------------------------------------------------
+----------------------------------------------------------
+-- Atualização na tabela `fornecedor` chave primario cnpj
+----------------------------------------------------------
+
+  UPDATE fornceedor SET nome_mpresa= "Carros Red Bull" WHERE cnpj IN ();
+  UPDATE fornceedor SET nome_mpresa= "Car Ferrari" WHERE cnpj IN ();
+  UPDATE fornceedor SET nome_mpresa= "Kart Leclerc" WHERE cnpj IN ();
+  UPDATE fornceedor SET nome_mpresa= "Kart Obama" WHERE cnpj IN ();
+  UPDATE fornceedor SET nome_mpresa= "Kart Barack" WHERE cnpj IN ();
+
+----------------------------------------------------------
+-- Atualização na tabela `karts` chave primario id_kart
+----------------------------------------------------------
+  
+  UPDATE karts SET cor= "Amarelo" WHERE id_karts IN (20);
+  UPDATE karts SET cor= "Verde" WHERE id_karts IN (21);
+  UPDATE karts SET cor= "Azul" WHERE id_karts IN (22);
+  UPDATE karts SET cor= "Preto" WHERE id_karts IN (23);
+  UPDATE karts SET cor= "Branco" WHERE id_karts IN (24);
+  UPDATE karts SET cor= "Roxo" WHERE id_karts IN (25);
+
+-------------------------------------------------------------
+-- Atualização na tabela `compras` chave primario id_compras
+-------------------------------------------------------------
+
+  UPDATE compras SET quantidade= '8' WHERE id_compras IN (20);
+  UPDATE compras SET quantidade= '7' WHERE id_compras IN (21);
+  UPDATE compras SET quantidade= '6' WHERE id_compras IN (22);
+  UPDATE compras SET quantidade= '5' WHERE id_compras IN (23);
+  UPDATE compras SET quantidade= '4' WHERE id_compras IN (24);
+  UPDATE compras SET quantidade= '3' WHERE id_compras IN (25);
+
+-------------------------------------------------------------
+-- Atualização na tabela `vendas` chave primario id_vendas
+-------------------------------------------------------------
+
+  UPDATE vendas SET data_venda= '08-11-2023' WHERE id_vendas IN (20);
+  UPDATE vendas SET data_venda= '11-11-2023' WHERE id_vendas IN (21);
+  UPDATE vendas SET data_venda= '21-11-2023' WHERE id_vendas IN (22);
+  UPDATE vendas SET data_venda= '09-11-2023' WHERE id_vendas IN (23);
+  UPDATE vendas SET data_venda= '11-09-2023' WHERE id_vendas IN (24);
+  UPDATE vendas SET data_venda= '11-01-2023' WHERE id_vendas IN (25);
+
+----------------------------------------------------------------
+-- Atualização na tabela `funcionarios` chave primario matricula
+----------------------------------------------------------------
+  
+  UPDATE funcionarios SET cargo= "Analista de Estoque" WHERE matricula IN ();
+  UPDATE funcionarios SET cargo= "Supervisor" WHERE matricula IN ();
+  UPDATE funcionarios SET cargo= "Grente" WHERE matricula IN ();
+  UPDATE funcionarios SET cargo= "Vendedor" WHERE matricula IN ();
+  UPDATE funcionarios SET cargo= "Caixa" WHERE matricula IN ();
+
 
  --Delete
 
