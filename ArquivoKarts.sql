@@ -298,11 +298,11 @@ INSERT INTO compras (karts_id_kart, vendas_id_vendas, quantidade, clientes_id_cl
 -- Atualização na tabela `fornecedor` chave primario cnpj
 ----------------------------------------------------------
 
-  UPDATE fornceedor SET nome_mpresa= "Carros Red Bull" WHERE cnpj IN ();
-  UPDATE fornceedor SET nome_mpresa= "Car Ferrari" WHERE cnpj IN ();
-  UPDATE fornceedor SET nome_mpresa= "Kart Leclerc" WHERE cnpj IN ();
-  UPDATE fornceedor SET nome_mpresa= "Kart Obama" WHERE cnpj IN ();
-  UPDATE fornceedor SET nome_mpresa= "Kart Barack" WHERE cnpj IN ();
+  UPDATE fornceedor SET nome_mpresa= "Carros Red Bull" WHERE cnpj IN (96160704771023);
+  UPDATE fornceedor SET nome_mpresa= "Car Ferrari" WHERE cnpj IN (51663115717740);
+  UPDATE fornceedor SET nome_mpresa= "Kart Leclerc" WHERE cnpj IN (28324356754189);
+  UPDATE fornceedor SET nome_mpresa= "Kart Obama" WHERE cnpj IN (85892187158679);
+  UPDATE fornceedor SET nome_mpresa= "Kart Barack" WHERE cnpj IN (94817259501371);
 
 ----------------------------------------------------------
 -- Atualização na tabela `karts` chave primario id_kart
@@ -341,11 +341,11 @@ INSERT INTO compras (karts_id_kart, vendas_id_vendas, quantidade, clientes_id_cl
 -- Atualização na tabela `funcionarios` chave primario matricula
 ----------------------------------------------------------------
   
-  UPDATE funcionarios SET cargo= "Analista de Estoque" WHERE matricula IN ();
-  UPDATE funcionarios SET cargo= "Supervisor" WHERE matricula IN ();
-  UPDATE funcionarios SET cargo= "Grente" WHERE matricula IN ();
-  UPDATE funcionarios SET cargo= "Vendedor" WHERE matricula IN ();
-  UPDATE funcionarios SET cargo= "Caixa" WHERE matricula IN ();
+  UPDATE funcionarios SET cargo= "Analista de Estoque" WHERE matricula IN (39259212899);
+  UPDATE funcionarios SET cargo= "Supervisor" WHERE matricula IN (831641212700);
+  UPDATE funcionarios SET cargo= "Grente" WHERE matricula IN (400646031526);
+  UPDATE funcionarios SET cargo= "Vendedor" WHERE matricula IN (101963251547);
+  UPDATE funcionarios SET cargo= "Caixa" WHERE matricula IN (158783648950);
 
 
  --Delete
