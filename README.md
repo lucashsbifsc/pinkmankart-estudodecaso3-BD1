@@ -10,7 +10,7 @@ INSERT INTO sistema_pinkman_kart (nomes) VALUES (
 )
 ```
 
-![Pinkman_Kart_512_512_px_1](https://github.com/lucashsbifsc/pinkmankart-estudodecaso3-BD1/assets/124683425/829feefb-4062-4ada-a6b7-028ebc5f8c8c)
+![Design sem nome](https://github.com/lucashsbifsc/pinkmankart-estudodecaso3-BD1/assets/124683425/fa103076-7fac-45fd-99ac-1fb0571b230a)
 
 ![Diagrama Karts (Versão FINAL PI)](https://github.com/lucashsbifsc/pinkmankart-estudodecaso3-BD1/assets/124683425/1ac1831d-3386-45dd-ac9a-2862354a441c)
 
