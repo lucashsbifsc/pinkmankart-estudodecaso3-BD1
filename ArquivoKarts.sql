@@ -440,25 +440,25 @@ INSERT INTO compras (karts_id_kart, vendas_id_vendas, quantidade, clientes_id_cl
 
 --Select Join:
 
-   SELECT tabela1.coluna1, tabela2.coluna1
-   FROM tabela1
-   INNER JOIN tabela2
+   SELECT compras.quantidade, vendas.valor_total
+   FROM compras
+   INNER JOIN vendas
    ON 
-   tabela1.coluna1 = tabela2.coluna1; 
+   compras.quantidade = vendas.valor_total; 
 
 
-   SELECT tabela1.coluna1, tabela2.coluna1
-   FROM tabela1
-   LEFT JOIN tabela2
+   SELECT compras.quantidade, vendas.valor_total
+   FROM compras
+   LEFT JOIN vendas
    ON 
-   tabela1.coluna1 = tabela2.coluna1;
+   compras.quantidade = vendas.valor_total;
 
 
-   SELECT tabela1.coluna1, tabela2.coluna1
-   FROM tabela1
-   RIGHT JOIN tabela2
+   SELECT compras.quantidade, vendas.valor_total
+   FROM compras
+   RIGHT JOIN vendas
    ON 
-   tabela1.coluna1 = tabela2.coluna1;
+   compras.quantidade = vendas.valor_total;
 
 
    
