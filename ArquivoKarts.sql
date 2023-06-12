@@ -29,7 +29,7 @@ CREATE Table IF NOT EXISTS `karts` (
   `preco` FLOAT NOT NULL,
   `fornecedor_cnpj` BIGINT(14) NOT NULL,
   PRIMARY KEY AUTO_INCREMENT (`id_kart`),
-  CONSTRAINT `fk_karts_fornecedor` FOREIGN KEY (`fornecedor_cnpj`) REFERENCES `fornecedor` (`cnpj`)
+  CONSTRAINT `fk_karts_fornecedor` FOREIGN KEY (`fornecedor_cnpj`) REFERENCES `fornecedor` (`cnpj`) ON DELETE CASCADE
 );
 
 -- -----------------------------------------------------
@@ -67,8 +67,8 @@ CREATE Table IF NOT EXISTS `vendas` (
   `clientes_id_cliente` INT NOT NULL,
   `valor_total` FLOAT NOT NULL,
   PRIMARY KEY AUTO_INCREMENT (`id_vendas`),
-  CONSTRAINT `fk_vendas_funcionarios1` FOREIGN KEY (`funcionarios_matricula`) REFERENCES `funcionarios` (`matricula`),
-  CONSTRAINT `fk_vendas_clientes1` FOREIGN KEY (`clientes_id_cliente`) REFERENCES `clientes` (`id_cliente`)
+  CONSTRAINT `fk_vendas_funcionarios1` FOREIGN KEY (`funcionarios_matricula`) REFERENCES `funcionarios` (`matricula`) ON DELETE CASCADE,
+  CONSTRAINT `fk_vendas_clientes1` FOREIGN KEY (`clientes_id_cliente`) REFERENCES `clientes` (`id_cliente`) ON DELETE CASCADE
 );
 
 -- -----------------------------------------------------
@@ -81,8 +81,8 @@ CREATE Table IF NOT EXISTS `compras` (
   `quantidade` INT(3) NOT NULL,
   `data_compra` DATE NOT NULL,
   PRIMARY KEY AUTO_INCREMENT (`id_compras`),
-  CONSTRAINT `fk_karts_has_vendas_karts1` FOREIGN KEY (`karts_id_kart`) REFERENCES `karts` (`id_kart`),
-  CONSTRAINT `fk_karts_has_vendas_vendas1` FOREIGN KEY (`vendas_id_vendas`) REFERENCES `vendas` (`id_vendas`)
+  CONSTRAINT `fk_karts_has_vendas_karts1` FOREIGN KEY (`karts_id_kart`) REFERENCES `karts` (`id_kart`) ON DELETE CASCADE,
+  CONSTRAINT `fk_karts_has_vendas_vendas1` FOREIGN KEY (`vendas_id_vendas`) REFERENCES `vendas` (`id_vendas`) ON DELETE CASCADE
 );
 
 -- -----------------------------------------------------
@@ -295,172 +295,173 @@ INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, da
 -- Atualização na tabela `clientes`
 -- -----------------------------------------------------
 
-  UPDATE clientes SET nome_completo = "Amanda Alves de Lima" WHERE id_cliente IN (20);
-  UPDATE clientes SET nome_completo = "Gabriele Ribeiro" WHERE id_cliente IN (21);
-  UPDATE clientes SET nome_completo = "Pietro Hofferman" WHERE id_cliente IN (22); 
-  UPDATE clientes SET nome_completo = "Lucas Lemes" WHERE id_cliente IN (23); 
-  UPDATE clientes SET nome_completo = "Guilherme Almeida" WHERE id_cliente IN (24); 
-  UPDATE clientes SET nome_completo = "Lucas Oliveira" WHERE id_cliente IN (25); 
+UPDATE clientes SET nome_completo = "Amanda Alves de Lima" WHERE id_cliente IN (20);
+UPDATE clientes SET nome_completo = "Gabriele Ribeiro" WHERE id_cliente IN (21);
+UPDATE clientes SET nome_completo = "Pietro Hofferman" WHERE id_cliente IN (22); 
+UPDATE clientes SET nome_completo = "Lucas Lemes" WHERE id_cliente IN (23); 
+UPDATE clientes SET nome_completo = "Guilherme Almeida" WHERE id_cliente IN (24); 
+UPDATE clientes SET nome_completo = "Lucas Oliveira" WHERE id_cliente IN (25); 
   
 ----------------------------------------------------------
 -- Atualização na tabela `fornecedor` chave primario cnpj
 ----------------------------------------------------------
 
-  UPDATE fornecedor SET nome_mpresa = "Carros Red Bull" WHERE cnpj IN (96160704771023);
-  UPDATE fornecedor SET nome_mpresa = "Car Ferrari" WHERE cnpj IN (51663115717740);
-  UPDATE fornecedor SET nome_mpresa = "Kart Leclerc" WHERE cnpj IN (28324356754189);
-  UPDATE fornecedor SET nome_mpresa = "Kart Obama" WHERE cnpj IN (85892187158679);
-  UPDATE fornecedor SET nome_mpresa = "Kart Barack" WHERE cnpj IN (94817259501371);
+UPDATE fornecedor SET nome_empresa = "Carros Red Bull" WHERE cnpj IN (96160704771023);
+UPDATE fornecedor SET nome_empresa = "Car Ferrari" WHERE cnpj IN (51663115717740);
+UPDATE fornecedor SET nome_empresa = "Kart Leclerc" WHERE cnpj IN (28324356754189);
+UPDATE fornecedor SET nome_empresa = "Kart Obama" WHERE cnpj IN (85892187158679);
+UPDATE fornecedor SET nome_empresa = "Kart Barack" WHERE cnpj IN (94817259501371);
 
 ----------------------------------------------------------
 -- Atualização na tabela `karts` chave primario id_kart
 ----------------------------------------------------------
   
-  UPDATE karts SET cor = "Amarelo" WHERE id_karts IN (20);
-  UPDATE karts SET cor = "Verde" WHERE id_karts IN (21);
-  UPDATE karts SET cor = "Azul" WHERE id_karts IN (22);
-  UPDATE karts SET cor = "Preto" WHERE id_karts IN (23);
-  UPDATE karts SET cor = "Branco" WHERE id_karts IN (24);
-  UPDATE karts SET cor = "Roxo" WHERE id_karts IN (25);
+UPDATE karts SET cor = "Amarelo" WHERE id_kart IN (20);
+UPDATE karts SET cor = "Verde" WHERE id_kart IN (21);
+UPDATE karts SET cor = "Azul" WHERE id_kart IN (22);
+UPDATE karts SET cor = "Preto" WHERE id_kart IN (23);
+UPDATE karts SET cor = "Branco" WHERE id_kart IN (24);
+UPDATE karts SET cor = "Roxo" WHERE id_kart IN (25);
 
 -------------------------------------------------------------
 -- Atualização na tabela `compras` chave primario id_compras
 -------------------------------------------------------------
 
-  UPDATE compras SET quantidade = '8' WHERE id_compras IN (20);
-  UPDATE compras SET quantidade = '7' WHERE id_compras IN (21);
-  UPDATE compras SET quantidade = '6' WHERE id_compras IN (22);
-  UPDATE compras SET quantidade = '5' WHERE id_compras IN (23);
-  UPDATE compras SET quantidade = '4' WHERE id_compras IN (24);
-  UPDATE compras SET quantidade = '3' WHERE id_compras IN (25);
+UPDATE compras SET quantidade = '8' WHERE id_compras IN (20);
+UPDATE compras SET quantidade = '7' WHERE id_compras IN (21);
+UPDATE compras SET quantidade = '6' WHERE id_compras IN (22);
+UPDATE compras SET quantidade = '5' WHERE id_compras IN (23);
+UPDATE compras SET quantidade = '4' WHERE id_compras IN (24);
+UPDATE compras SET quantidade = '3' WHERE id_compras IN (25);
 
 -------------------------------------------------------------
 -- Atualização na tabela `vendas` chave primario id_vendas
 -------------------------------------------------------------
 
-  UPDATE vendas SET data_venda = '08-11-2023' WHERE id_vendas IN (20);
-  UPDATE vendas SET data_venda = '11-11-2023' WHERE id_vendas IN (21);
-  UPDATE vendas SET data_venda = '21-11-2023' WHERE id_vendas IN (22);
-  UPDATE vendas SET data_venda = '09-11-2023' WHERE id_vendas IN (23);
-  UPDATE vendas SET data_venda = '11-09-2023' WHERE id_vendas IN (24);
-  UPDATE vendas SET data_venda = '11-01-2023' WHERE id_vendas IN (25);
+UPDATE vendas SET data_venda = '2023-11-08' WHERE id_vendas IN (20);
+UPDATE vendas SET data_venda = '2023-11-11' WHERE id_vendas IN (21);
+UPDATE vendas SET data_venda = '2023-11-21' WHERE id_vendas IN (22);
+UPDATE vendas SET data_venda = '2023-11-09' WHERE id_vendas IN (23);
+UPDATE vendas SET data_venda = '2023-09-11' WHERE id_vendas IN (24);
+UPDATE vendas SET data_venda = '2023-01-11' WHERE id_vendas IN (25);
 
 ----------------------------------------------------------------
 -- Atualização na tabela `funcionarios` chave primario matricula
 ----------------------------------------------------------------
   
-  UPDATE funcionarios SET cargo = "Analista de Estoque" WHERE matricula IN (39259212899);
-  UPDATE funcionarios SET cargo = "Supervisor" WHERE matricula IN (831641212700);
-  UPDATE funcionarios SET cargo = "Grente" WHERE matricula IN (400646031526);
-  UPDATE funcionarios SET cargo = "Vendedor" WHERE matricula IN (101963251547);
-  UPDATE funcionarios SET cargo = "Caixa" WHERE matricula IN (158783648950);
+UPDATE funcionarios SET cargo = "Analista de Estoque" WHERE matricula IN (39259212899);
+UPDATE funcionarios SET cargo = "Supervisor" WHERE matricula IN (831641212700);
+UPDATE funcionarios SET cargo = "Grente" WHERE matricula IN (400646031526);
+UPDATE funcionarios SET cargo = "Vendedor" WHERE matricula IN (101963251547);
+UPDATE funcionarios SET cargo = "Caixa" WHERE matricula IN (158783648950);
 
 
 -- DELETE
 
 -- -----------------------------------------------------
--- DELETE na tabela `Cliente`
+-- DELETE na tabela `Cliente` e `Vendas`
 -- -----------------------------------------------------
 
-   DELETE FROM clientes WHERE id_cliente = 30;
-   DELETE FROM clientes WHERE id_cliente = 29;
-   DELETE FROM clientes WHERE id_cliente = 28;
-   DELETE FROM clientes WHERE id_cliente = 27;
-   DELETE FROM clientes WHERE id_cliente = 26; 
+DELETE FROM vendas WHERE clientes_id_cliente = 30;
+DELETE FROM vendas WHERE clientes_id_cliente = 29;
+DELETE FROM vendas WHERE clientes_id_cliente = 28;
+DELETE FROM vendas WHERE clientes_id_cliente = 27;
+DELETE FROM vendas WHERE clientes_id_cliente = 26;
+
+DELETE FROM clientes WHERE id_cliente = 30;
+DELETE FROM clientes WHERE id_cliente = 29;
+DELETE FROM clientes WHERE id_cliente = 28;
+DELETE FROM clientes WHERE id_cliente = 27;
+DELETE FROM clientes WHERE id_cliente = 26; 
 
 -- -----------------------------------------------------
 -- DELETE na tabela `fornecedor`
 -- -----------------------------------------------------
 
-   DELETE FROM fornecedor WHERE cnpj = 30;
-   DELETE FROM fornecedor WHERE cnpj = 29;
-   DELETE FROM fornecedor WHERE cnpj = 28;
-   DELETE FROM fornecedor WHERE cnpj = 27;
-   DELETE FROM fornecedor WHERE cnpj = 26;
+DELETE FROM fornecedor WHERE cnpj = 30;
+DELETE FROM fornecedor WHERE cnpj = 29;
+DELETE FROM fornecedor WHERE cnpj = 28;
+DELETE FROM fornecedor WHERE cnpj = 27;
+DELETE FROM fornecedor WHERE cnpj = 26;
  
 -- -----------------------------------------------------
 -- DELETE na tabela `kart`
 -- -----------------------------------------------------
  
-   DELETE FROM kart WHERE id_kart = 30;
-   DELETE FROM kart WHERE id_kart = 29;
-   DELETE FROM kart WHERE id_kart = 28;
-   DELETE FROM kart WHERE id_kart = 27;
-   DELETE FROM kart WHERE id_kart = 26;
+DELETE FROM karts WHERE id_kart = 30;
+DELETE FROM karts WHERE id_kart = 29;
+DELETE FROM karts WHERE id_kart = 28;
+DELETE FROM karts WHERE id_kart = 27;
+DELETE FROM karts WHERE id_kart = 26;
 
 -- -----------------------------------------------------
 -- DELETE na tabela `funcionarios`
 -- -----------------------------------------------------
 
-   DELETE FROM funcionario WHERE matricula = 30;
-   DELETE FROM funcionario WHERE matricula = 29;
-   DELETE FROM funcionario WHERE matricula = 28;
-   DELETE FROM funcionario WHERE matricula = 27;
-   DELETE FROM funcionario WHERE matricula = 26;
+DELETE FROM funcionarios WHERE matricula = 30;
+DELETE FROM funcionarios WHERE matricula = 29;
+DELETE FROM funcionarios WHERE matricula = 28;
+DELETE FROM funcionarios WHERE matricula = 27;
+DELETE FROM funcionarios WHERE matricula = 26;
 
 -- -----------------------------------------------------
 -- DELETE na tabela `compras`
 -- -----------------------------------------------------
 
-   DELETE FROM compras WHERE id_compras = 30;
-   DELETE FROM compras WHERE id_compras = 29;
-   DELETE FROM compras WHERE id_compras = 28;
-   DELETE FROM compras WHERE id_compras = 27;
-   DELETE FROM compras WHERE id_compras = 26;
+DELETE FROM compras WHERE id_compras = 30;
+DELETE FROM compras WHERE id_compras = 29;
+DELETE FROM compras WHERE id_compras = 28;
+DELETE FROM compras WHERE id_compras = 27;
+DELETE FROM compras WHERE id_compras = 26;
 
 -- -----------------------------------------------------
 -- DELETE na tabela `vendas`
 -- -----------------------------------------------------   
 
-   DELETE FROM vendas WHERE id_vendas = 30;
-   DELETE FROM vendas WHERE id_vendas = 29;
-   DELETE FROM vendas WHERE id_vendas = 28;
-   DELETE FROM vendas WHERE id_vendas = 27;
-   DELETE FROM vendas WHERE id_vendas = 26;
+DELETE FROM vendas WHERE id_vendas = 30;
+DELETE FROM vendas WHERE id_vendas = 29;
+DELETE FROM vendas WHERE id_vendas = 28;
+DELETE FROM vendas WHERE id_vendas = 27;
+DELETE FROM vendas WHERE id_vendas = 26;
    
 -- -----------------------------------------------------
 -- SELECT das tabelas 
 -- -----------------------------------------------------  
 
---Select Count:
+-- Select Count:
 
-   SELECT count(*) FROM clientes;
-   SELECT count(*) FROM funcionario;
-   SELECT count(*) FROM fornecedor;
-   SELECT count(*) FROM vendas;
-   SELECT count(*) FROM compras;
-   SELECT count(*) FROM karts;
+SELECT COUNT(*) FROM clientes;
+SELECT COUNT(*) FROM funcionarios;
+SELECT COUNT(*) FROM fornecedor;
+SELECT COUNT(*) FROM vendas;
+SELECT COUNT(*) FROM compras;
+SELECT COUNT(*) FROM karts;
 
---Select All:
+-- Select All:
 
-   SELECT * FROM clientes ORDER BY id_cliente ASC; 
-   SELECT * FROM funcionario ORDER BY matricula ASC;
-   SELECT * FROM fornecedor ORDER BY cnpj ASC;
-   SELECT * FROM vendas ORDER BY id_vendas ASC;
-   SELECT * FROM compras ORDER BY id_compras ASC;
-   SELECT * FROM karts ORDER BY id_karts ASC;
+SELECT * FROM clientes ORDER BY id_cliente ASC; 
+SELECT * FROM funcionarios ORDER BY matricula ASC;
+SELECT * FROM fornecedor ORDER BY cnpj ASC;
+SELECT * FROM vendas ORDER BY id_vendas ASC;
+SELECT * FROM compras ORDER BY id_compras ASC;
+SELECT * FROM karts ORDER BY id_kart ASC;
 
---Select Join:
+-- Select Join:
 
-   SELECT compras.quantidade, vendas.valor_total
-   FROM compras
-   INNER JOIN vendas
-   ON 
-   compras.quantidade = vendas.valor_total; 
+SELECT fornecedor.cnpj, karts.fornecedor_cnpj
+FROM fornecedor
+INNER JOIN karts
+ON 
+fornecedor.cnpj = karts.fornecedor_cnpj; 
 
+SELECT fornecedor.cnpj, karts.fornecedor_cnpj
+FROM fornecedor
+LEFT JOIN karts
+ON 
+fornecedor.cnpj = karts.fornecedor_cnpj; 
 
-   SELECT compras.quantidade, vendas.valor_total
-   FROM compras
-   LEFT JOIN vendas
-   ON 
-   compras.quantidade = vendas.valor_total;
-
-
-   SELECT compras.quantidade, vendas.valor_total
-   FROM compras
-   RIGHT JOIN vendas
-   ON 
-   compras.quantidade = vendas.valor_total;
-
-
-   
+SELECT fornecedor.cnpj, karts.fornecedor_cnpj
+FROM fornecedor
+RIGHT JOIN karts
+ON 
+fornecedor.cnpj = karts.fornecedor_cnpj; 
