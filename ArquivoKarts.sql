@@ -416,3 +416,21 @@ INSERT INTO compras (karts_id_kart, vendas_id_vendas, quantidade, clientes_id_cl
    DELETE FROM vendas WHERE id_vendas = 27;
    DELETE FROM vendas WHERE id_vendas = 26;
    
+-- -----------------------------------------------------
+-- SELECT Das tabelas 
+-- -----------------------------------------------------  
+
+   SELECT count(*) FROM clientes;
+   SELECT count(*) FROM funcionario;
+   SELECT count(*) FROM fornecedor;
+   SELECT count(*) FROM vendas;
+   SELECT count(*) FROM compras;
+   SELECT count(*) FROM karts;
+
+   SELECT * FROM clientes ORDER BY id_cliente ASC; 
+   SELECT * FROM funcionario ORDER BY matricula ASC;
+   SELECT * FROM fornecedor ORDER BY cnpj ASC;
+   SELECT * FROM vendas ORDER BY id_vendas ASC;
+   SELECT * FROM compras ORDER BY id_compras ASC;
+   SELECT * FROM karts ORDER BY id_karts ASC;
+   
