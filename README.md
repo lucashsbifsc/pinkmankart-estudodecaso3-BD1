@@ -12,7 +12,7 @@ INSERT INTO sistema_pinkman_kart (nomes) VALUES (
 
 ![image-removebg-preview](https://github.com/lucashsbifsc/pinkmankart-estudodecaso3-BD1/assets/124683425/ffe1cfe0-b0e0-4199-ba9e-38ce0596b21b)
 
-![Diagrama Karts (Versão FINAL PI)](https://github.com/lucashsbifsc/pinkmankart-estudodecaso3-BD1/assets/124683425/1ac1831d-3386-45dd-ac9a-2862354a441c)
+![Diagrama Karts (Versão FINAL PI)](https://github.com/lucashsbifsc/pinkmankart-estudodecaso3-BD1/assets/124683425/73b65551-7710-4718-b17c-a34a6cc2eb7c)
 
 **Instituto Federal de Santa Catarina - Campus Gaspar**<br>
 **Turma:** Informática - Fase 5<br>
