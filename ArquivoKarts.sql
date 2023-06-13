@@ -60,29 +60,18 @@ CREATE Table IF NOT EXISTS `clientes` (
 -- -----------------------------------------------------primeiro_nome
 -- Table `vendas`
 -- -----------------------------------------------------
-CREATE Table IF NOT EXISTS `vendas` (
+CREATE TABLE IF NOT EXISTS `vendas` (
   `id_vendas` INT NOT NULL,
   `data_venda` DATE NOT NULL,
   `funcionarios_matricula` BIGINT(11) NOT NULL,
   `clientes_id_cliente` INT NOT NULL,
   `valor_total` FLOAT NOT NULL,
+  `quantidade` INT(3) NOT NULL,
+  `karts_id_kart` INT NOT NULL,
   PRIMARY KEY AUTO_INCREMENT (`id_vendas`),
   CONSTRAINT `fk_vendas_funcionarios1` FOREIGN KEY (`funcionarios_matricula`) REFERENCES `funcionarios` (`matricula`) ON DELETE CASCADE,
-  CONSTRAINT `fk_vendas_clientes1` FOREIGN KEY (`clientes_id_cliente`) REFERENCES `clientes` (`id_cliente`) ON DELETE CASCADE
-);
-
--- -----------------------------------------------------
--- Table `compras`
--- -----------------------------------------------------
-CREATE Table IF NOT EXISTS `compras` (
-  `id_compras` INT NOT NULL,
-  `karts_id_kart` INT NOT NULL,
-  `vendas_id_vendas` INT NOT NULL,
-  `quantidade` INT(3) NOT NULL,
-  `data_compra` DATE NOT NULL,
-  PRIMARY KEY AUTO_INCREMENT (`id_compras`),
-  CONSTRAINT `fk_karts_has_vendas_karts1` FOREIGN KEY (`karts_id_kart`) REFERENCES `karts` (`id_kart`) ON DELETE CASCADE,
-  CONSTRAINT `fk_karts_has_vendas_vendas1` FOREIGN KEY (`vendas_id_vendas`) REFERENCES `vendas` (`id_vendas`) ON DELETE CASCADE
+  CONSTRAINT `fk_vendas_clientes1` FOREIGN KEY (`clientes_id_cliente`) REFERENCES `clientes` (`id_cliente`) ON DELETE CASCADE,
+  CONSTRAINT `fk_vendas_karts1` FOREIGN KEY (`karts_id_kart`) REFERENCES `karts` (`id_kart`) ON DELETE CASCADE
 );
 
 -- -----------------------------------------------------
@@ -223,76 +212,42 @@ INSERT INTO clientes (id_cliente, nome_completo, data_nascimento, cnpj, cpf) VAL
 -- -----------------------------------------------------
 -- Inserção na tabela `vendas`
 -- -----------------------------------------------------
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (1, '2023-04-14', 82431679640, 1, 5738565.87);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (2, '2023-01-30', 15506231849, 2, 4756586.3);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (3, '2023-01-20', 84332839025, 3, 1675808.18);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (4, '2023-01-06', 86703160210, 4, 5380043.95);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (5, '2023-05-29', 22126294064, 5, 5352250.44);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (6, '2023-03-09', 43891081600, 6, 7511593.31);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (7, '2023-04-30', 26097921599, 7, 5431299.1);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (8, '2023-02-24', 96429826849, 8, 3409219.13);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (9, '2023-02-15', 6373230712, 9, 3021547.93);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (10, '2023-05-19', 97978180182, 10, 1420593.09);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (11, '2023-02-04', 28838767414, 11, 2075496.26);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (12, '2023-03-25', 5230118088, 12, 4877492.81);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (13, '2023-01-22', 13067646358, 13, 8681476.92);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (14, '2023-04-09', 39655805088, 14, 1532599.19);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (15, '2023-01-29', 97501221834, 15, 9355675.13);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (16, '2023-01-18', 91307269603, 16, 9754695.91);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (17, '2023-02-18', 85819604539, 17, 7326373.48);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (18, '2023-03-10', 37635633558, 18, 2319206.63);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (19, '2023-01-11', 61429672143, 19, 5552774.85);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (20, '2023-02-15', 63722110026, 20, 1623992.26);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (21, '2023-05-28', 83559425059, 21, 6879498.57);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (22, '2023-06-04', 26228537312, 22, 92853.01);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (23, '2023-01-25', 70841881573, 23, 6007408.91);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (24, '2023-04-21', 23872314753, 24, 4565374.34);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (25, '2023-04-03', 12384525692, 25, 4199577.65);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (26, '2023-05-15', 32966856247, 26, 6635571.11);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (27, '2023-05-01', 22554399592, 27, 9002490.81);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (28, '2023-05-26', 76251366973, 28, 8685104.15);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (29, '2023-06-05', 91578389041, 29, 8208494.78);
-INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total) VALUES (30, '2023-01-07', 36943744159, 30, 1885928.92);
-
--- -----------------------------------------------------
--- Inserção na tabela `compras`
--- -----------------------------------------------------
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (1, 1, 1, 648, '2023-01-22');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (2, 2, 2, 880, '2023-02-27');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (3, 3, 3, 69, '2023-03-08');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (4, 4, 4, 759, '2023-04-19');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (5, 5, 5, 392, '2023-03-05');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (6, 6, 6, 419, '2023-05-08');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (7, 7, 7, 992, '2023-05-07');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (8, 8, 8, 787, '2023-05-05');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (9, 9, 9, 867, '2023-03-16');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (10, 10, 10, 510, '2023-05-13');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (11, 11, 11, 319, '2023-05-21');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (12, 12, 12, 679, '2023-04-26');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (13, 13, 13, 406, '2023-01-17');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (14, 14, 14, 969, '2023-02-07');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (15, 15, 15, 827, '2023-03-29');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (16, 16, 16, 369, '2023-02-06');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (17, 17, 17, 787, '2023-03-18');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (18, 18, 18, 574, '2023-03-01');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (19, 19, 19, 702, '2023-06-05');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (20, 20, 20, 110, '2023-04-23');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (21, 21, 21, 879, '2023-02-25');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (22, 22, 22, 572, '2023-04-18');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (23, 23, 23, 896, '2023-02-25');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (24, 24, 24, 842, '2023-05-22');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (25, 25, 25, 173, '2023-02-23');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (26, 26, 26, 511, '2023-03-23');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (27, 27, 27, 910, '2023-03-05');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (28, 28, 28, 555, '2023-02-11');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (29, 29, 29, 312, '2023-02-11');
-INSERT INTO compras (id_compras, karts_id_kart, vendas_id_vendas, quantidade, data_compra) VALUES (30, 30, 30, 506, '2023-01-02');
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (1, '2023-04-14', 82431679640, 1, 5738565.87, 648, 1);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (2, '2023-01-30', 15506231849, 2, 4756586.3, 880, 2);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (3, '2023-01-20', 84332839025, 3, 1675808.18, 69, 3);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (4, '2023-01-06', 86703160210, 4, 5380043.95, 759, 4);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (5, '2023-05-29', 22126294064, 5, 5352250.44, 392, 5);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (6, '2023-03-09', 43891081600, 6, 7511593.31, 419, 6);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (7, '2023-04-30', 26097921599, 7, 5431299.1, 992, 7);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (8, '2023-02-24', 96429826849, 8, 3409219.13, 787, 8);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (9, '2023-02-15', 6373230712, 9, 3021547.93, 867, 9);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (10, '2023-05-19', 97978180182, 10, 1420593.09, 510, 10);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (11, '2023-02-04', 28838767414, 11, 2075496.26, 319, 11);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (12, '2023-03-25', 5230118088, 12, 4877492.81, 679, 12);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (13, '2023-01-22', 13067646358, 13, 8681476.92, 406, 13);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (14, '2023-04-09', 39655805088, 14, 1532599.19, 969, 14);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (15, '2023-01-29', 97501221834, 15, 9355675.13, 827, 15);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (16, '2023-01-18', 91307269603, 16, 9754695.91, 369, 16);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (17, '2023-02-18', 85819604539, 17, 7326373.48, 787, 17);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (18, '2023-03-10', 37635633558, 18, 2319206.63, 574, 18);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (19, '2023-01-11', 61429672143, 19, 5552774.85, 702, 19);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (20, '2023-02-15', 63722110026, 20, 1623992.26, 110, 20);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (21, '2023-05-28', 83559425059, 21, 6879498.57, 879, 21);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (22, '2023-06-04', 26228537312, 22, 92853.01, 572, 22);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (23, '2023-01-25', 70841881573, 23, 6007408.91, 896, 23);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (24, '2023-04-21', 23872314753, 24, 4565374.34, 842, 24);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (25, '2023-04-03', 12384525692, 25, 4199577.65, 173, 25);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (26, '2023-05-15', 32966856247, 26, 6635571.11, 511, 26);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (27, '2023-05-01', 22554399592, 27, 9002490.81, 910, 27);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (28, '2023-05-26', 76251366973, 28, 8685104.15, 555, 28);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (29, '2023-06-05', 91578389041, 29, 8208494.78, 312, 29);
+INSERT INTO vendas (id_vendas, data_venda, funcionarios_matricula, clientes_id_cliente, valor_total, quantidade, karts_id_kart) VALUES (30, '2023-01-07', 36943744159, 30, 1885928.92, 506, 30);
 
 
 -- UPDATE
     
 --------------------------------------------------------
--- Atualização na tabela `clientes`
+-- Atualização na tabela `clientes` chave primária id_cliente
 -- -----------------------------------------------------
 
 UPDATE clientes SET nome_completo = "Amanda Alves de Lima" WHERE id_cliente IN (20);
@@ -303,7 +258,7 @@ UPDATE clientes SET nome_completo = "Guilherme Almeida" WHERE id_cliente IN (24)
 UPDATE clientes SET nome_completo = "Lucas Oliveira" WHERE id_cliente IN (25); 
   
 ----------------------------------------------------------
--- Atualização na tabela `fornecedor` chave primario cnpj
+-- Atualização na tabela `fornecedor` chave primária cnpj
 ----------------------------------------------------------
 
 UPDATE fornecedor SET nome_empresa = "Carros Red Bull" WHERE cnpj IN (96160704771023);
@@ -313,7 +268,7 @@ UPDATE fornecedor SET nome_empresa = "Kart Obama" WHERE cnpj IN (85892187158679)
 UPDATE fornecedor SET nome_empresa = "Kart Barack" WHERE cnpj IN (94817259501371);
 
 ----------------------------------------------------------
--- Atualização na tabela `karts` chave primario id_kart
+-- Atualização na tabela `karts` chave primária id_kart
 ----------------------------------------------------------
   
 UPDATE karts SET cor = "Amarelo" WHERE id_kart IN (20);
@@ -324,18 +279,7 @@ UPDATE karts SET cor = "Branco" WHERE id_kart IN (24);
 UPDATE karts SET cor = "Roxo" WHERE id_kart IN (25);
 
 -------------------------------------------------------------
--- Atualização na tabela `compras` chave primario id_compras
--------------------------------------------------------------
-
-UPDATE compras SET quantidade = '8' WHERE id_compras IN (20);
-UPDATE compras SET quantidade = '7' WHERE id_compras IN (21);
-UPDATE compras SET quantidade = '6' WHERE id_compras IN (22);
-UPDATE compras SET quantidade = '5' WHERE id_compras IN (23);
-UPDATE compras SET quantidade = '4' WHERE id_compras IN (24);
-UPDATE compras SET quantidade = '3' WHERE id_compras IN (25);
-
--------------------------------------------------------------
--- Atualização na tabela `vendas` chave primario id_vendas
+-- Atualização na tabela `vendas` chave primária id_vendas
 -------------------------------------------------------------
 
 UPDATE vendas SET data_venda = '2023-11-08' WHERE id_vendas IN (20);
@@ -346,7 +290,7 @@ UPDATE vendas SET data_venda = '2023-09-11' WHERE id_vendas IN (24);
 UPDATE vendas SET data_venda = '2023-01-11' WHERE id_vendas IN (25);
 
 ----------------------------------------------------------------
--- Atualização na tabela `funcionarios` chave primario matricula
+-- Atualização na tabela `funcionarios` chave primária matricula
 ----------------------------------------------------------------
   
 UPDATE funcionarios SET cargo = "Analista de Estoque" WHERE matricula IN (39259212899);
@@ -405,16 +349,6 @@ DELETE FROM funcionarios WHERE matricula = 27;
 DELETE FROM funcionarios WHERE matricula = 26;
 
 -- -----------------------------------------------------
--- DELETE na tabela `compras`
--- -----------------------------------------------------
-
-DELETE FROM compras WHERE id_compras = 30;
-DELETE FROM compras WHERE id_compras = 29;
-DELETE FROM compras WHERE id_compras = 28;
-DELETE FROM compras WHERE id_compras = 27;
-DELETE FROM compras WHERE id_compras = 26;
-
--- -----------------------------------------------------
 -- DELETE na tabela `vendas`
 -- -----------------------------------------------------   
 
@@ -434,7 +368,6 @@ SELECT COUNT(*) FROM clientes;
 SELECT COUNT(*) FROM funcionarios;
 SELECT COUNT(*) FROM fornecedor;
 SELECT COUNT(*) FROM vendas;
-SELECT COUNT(*) FROM compras;
 SELECT COUNT(*) FROM karts;
 
 -- Select All:
@@ -443,7 +376,6 @@ SELECT * FROM clientes ORDER BY id_cliente ASC;
 SELECT * FROM funcionarios ORDER BY matricula ASC;
 SELECT * FROM fornecedor ORDER BY cnpj ASC;
 SELECT * FROM vendas ORDER BY id_vendas ASC;
-SELECT * FROM compras ORDER BY id_compras ASC;
 SELECT * FROM karts ORDER BY id_kart ASC;
 
 -- Select Join:
